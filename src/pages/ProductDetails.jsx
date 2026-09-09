@@ -47,7 +47,7 @@ function ProductDetails() {
               {product.category}
             </span>
 
-            <h1>{product.name}</h1>
+            <h2>{product.name}</h2>
 
             <p className="product-description">
               {product.description}
