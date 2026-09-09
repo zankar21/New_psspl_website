@@ -13,6 +13,7 @@ import Partners from "./pages/Partners";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -39,6 +40,7 @@ function App() {
       </main>
 
       <Footer />
+      
     </BrowserRouter>
   );
 }

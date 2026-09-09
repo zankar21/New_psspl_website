@@ -1,4 +1,5 @@
 import Hero from "../components/home/Hero";
+import TrustedBy from "../components/home/TrustedBy";
 import AboutPreview from "../components/home/AboutPreview";
 import ProductsPreview from "../components/home/ProductsPreview";
 import PrincipalsPartners from "../components/home/PrincipalsPartners";
@@ -13,6 +14,8 @@ function Home() {
     <>
 
       <Hero />
+
+      <TrustedBy />
 
       <AboutPreview />
 

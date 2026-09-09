@@ -9,5 +9,6 @@
 
   --container-width: 1200px;
 
-  --font-main: Arial, Helvetica, sans-serif;
+  --font-main: "Inter", Arial, Helvetica, sans-serif;
+  --font-heading: "Poppins", "Inter", Arial, sans-serif;
 }
