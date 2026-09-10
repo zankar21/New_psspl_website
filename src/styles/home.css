@@ -507,3 +507,68 @@
   display: block;
   text-align: center;
   font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--gray);
+  margin-bottom: 25px;
+}
+
+.trusted-by-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.trusted-by-item {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--primary-color);
+  opacity: 0.65;
+  transition: 0.3s;
+}
+
+.trusted-by-item:hover {
+  opacity: 1;
+  color: var(--secondary-color);
+}
+
+
+/* ========================================
+   HOME — CTA
+======================================== */
+
+.cta-section {
+  background: var(--secondary-color);
+  padding: 60px 0;
+  color: white;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.cta-container p {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.cta-container h2 {
+  font-size: 32px;
+  max-width: 700px;
+}
+
+.cta-section .btn-primary {
+  background: var(--primary-color);
+  white-space: nowrap;
+}
+
+.cta-section .btn-primary:hover {
+  background: #06192b;
+}
