@@ -1,13 +1,17 @@
 export const products = [
+
   {
     id: 1,
     slug: "boiler-tubes",
     name: "Boiler Tubes",
     category: "Boiler Pressure Parts",
+
     shortDescription:
       "High-quality boiler tubes designed for high-temperature and high-pressure industrial applications.",
+
     description:
-      "Our boiler tubes are designed for demanding thermal and industrial applications where reliability, material quality and dimensional accuracy are critical.",
+      "Boiler tubes are critical pressure components used in industrial and power plant boiler systems. They are designed for demanding thermal applications where material quality, reliability and dimensional accuracy are essential.",
+
     features: [
       "High temperature resistance",
       "Suitable for high pressure applications",
@@ -16,15 +20,19 @@ export const products = [
     ]
   },
 
+
   {
     id: 2,
     slug: "economiser-coils",
     name: "Economiser Coils",
-    category: "Heat Recovery Components",
+    category: "Boiler Pressure Parts",
+
     shortDescription:
-      "Engineered economiser coils designed to improve boiler efficiency and heat recovery.",
+      "Engineered economiser coils designed to improve boiler efficiency and recover heat from flue gases.",
+
     description:
-      "Economiser coils recover heat from flue gases to improve boiler efficiency and reduce overall fuel consumption.",
+      "Economiser coils are important boiler pressure components designed to recover heat from flue gases and improve overall boiler efficiency. They are widely used in power generation and industrial boiler applications.",
+
     features: [
       "Improved heat recovery",
       "Enhanced boiler efficiency",
@@ -33,15 +41,19 @@ export const products = [
     ]
   },
 
+
   {
     id: 3,
     slug: "superheater-coils",
     name: "Superheater Coils",
     category: "Boiler Pressure Parts",
+
     shortDescription:
-      "Reliable superheater coils for high-temperature steam generation applications.",
+      "Reliable superheater coils designed for high-temperature steam generation applications.",
+
     description:
-      "Superheater coils increase the temperature of steam beyond saturation levels for improved efficiency in power generation and industrial boiler systems.",
+      "Superheater coils increase the temperature of steam beyond saturation levels and are critical components in power generation and industrial boiler systems.",
+
     features: [
       "High temperature capability",
       "Pressure-resistant design",
@@ -50,15 +62,19 @@ export const products = [
     ]
   },
 
+
   {
     id: 4,
     slug: "water-wall-panels",
     name: "Water Wall Panels",
     category: "Boiler Pressure Parts",
+
     shortDescription:
       "Precision-engineered water wall panels for industrial and power plant boiler systems.",
+
     description:
-      "Water wall panels form an important part of modern boilers and help absorb radiant heat efficiently while maintaining safe pressure boundaries.",
+      "Water wall panels form an important part of modern boiler systems. They absorb radiant heat efficiently while maintaining the boiler's pressure boundary.",
+
     features: [
       "Efficient heat absorption",
       "Pressure boundary reliability",
@@ -67,15 +83,19 @@ export const products = [
     ]
   },
 
+
   {
     id: 5,
     slug: "reheater-coils",
     name: "Reheater Coils",
     category: "Boiler Pressure Parts",
+
     shortDescription:
       "High-performance reheater coils designed for thermal power and industrial boiler applications.",
+
     description:
-      "Reheater coils improve thermal cycle efficiency by reheating partially expanded steam before it returns to the turbine.",
+      "Reheater coils improve thermal cycle efficiency by reheating partially expanded steam before it returns to the turbine system.",
+
     features: [
       "High temperature operation",
       "Thermal efficiency support",
@@ -84,15 +104,19 @@ export const products = [
     ]
   },
 
+
   {
     id: 6,
-    slug: "header-and-manifolds",
+    slug: "headers-and-manifolds",
     name: "Headers & Manifolds",
-    category: "Pressure Components",
+    category: "Boiler Pressure Parts",
+
     shortDescription:
       "Engineered headers and manifolds for efficient distribution and collection of steam and water.",
+
     description:
-      "Headers and manifolds are critical boiler pressure components used for distributing and collecting steam or water between various boiler sections.",
+      "Headers and manifolds are critical boiler pressure components used for distributing and collecting steam or water between different boiler sections.",
+
     features: [
       "Pressure-rated construction",
       "Custom connection configurations",
@@ -100,4 +124,5 @@ export const products = [
       "Suitable for industrial applications"
     ]
   }
+
 ];

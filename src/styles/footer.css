@@ -1,0 +1,172 @@
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+  background: #081f35;
+
+  color: #cbd5e1;
+
+  padding-top: 70px;
+}
+
+
+.footer-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.5fr
+    1fr
+    1fr
+    1.3fr;
+
+  gap: 50px;
+
+  padding-bottom: 60px;
+}
+
+
+/* COMPANY */
+
+.footer-logo {
+  display: inline-block;
+
+  font-size: 24px;
+
+  font-weight: 800;
+
+  color: white;
+
+  margin-bottom: 20px;
+}
+
+.footer-logo span {
+  color: var(--secondary-color);
+}
+
+.footer-company p {
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  max-width: 320px;
+}
+
+
+/* SOCIAL MEDIA */
+
+.social-links {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.social-links a {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: var(--secondary-color);
+
+  border-color: var(--secondary-color);
+
+  color: white;
+}
+
+
+/* FOOTER COLUMNS */
+
+.footer-column h3 {
+  color: white;
+
+  font-size: 17px;
+
+  margin-bottom: 25px;
+}
+
+.footer-column ul {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.footer-column li {
+  font-size: 14px;
+
+  transition: 0.3s;
+}
+
+.footer-column li:hover {
+  color: var(--secondary-color);
+}
+
+
+/* CONTACT INFO */
+
+.contact-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.contact-info div {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.contact-info svg {
+  color: var(--secondary-color);
+
+  margin-top: 3px;
+}
+
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+  border-top:
+    1px solid rgba(255,255,255,0.1);
+
+  padding: 25px 0;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  font-size: 13px;
+}
+
+.footer-legal {
+  display: flex;
+
+  gap: 20px;
+}
+
+.footer-legal a:hover {
+  color: var(--secondary-color);
+}

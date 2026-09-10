@@ -4,9 +4,18 @@ function ProductCard({ product }) {
   return (
     <article className="product-card">
 
-      <div className="product-image">
-        PRODUCT IMAGE
+      <div className="product-image product-image-placeholder">
+
+        <span className="product-image-label">
+          RIBO
+        </span>
+
+        <span className="product-image-name">
+          {product.name}
+        </span>
+
       </div>
+
 
       <div className="product-content">
 
@@ -14,17 +23,20 @@ function ProductCard({ product }) {
           {product.category}
         </span>
 
-        <h3>{product.name}</h3>
+        <h3>
+          {product.name}
+        </h3>
 
         <p>
           {product.shortDescription}
         </p>
 
+
         <Link
           to={`/products/${product.slug}`}
           className="product-link"
         >
-          Learn More →
+          Explore Product →
         </Link>
 
       </div>

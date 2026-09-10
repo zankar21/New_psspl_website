@@ -1,0 +1,55 @@
+/* ========================================
+   GLOBAL VARIABLES
+======================================== */
+
+@import "./variables.css";
+
+
+/* ========================================
+   BASE & RESET
+======================================== */
+
+@import "./reset.css";
+
+
+/* ========================================
+   LAYOUT
+======================================== */
+
+@import "./layout.css";
+
+
+/* ========================================
+   COMMON COMPONENTS
+======================================== */
+
+@import "./common.css";
+
+
+/* ========================================
+   LAYOUT COMPONENTS
+======================================== */
+
+@import "./navbar.css";
+@import "./footer.css";
+
+
+/* ========================================
+   PAGE STYLES
+======================================== */
+
+@import "./home.css";
+@import "./about.css";
+@import "./products.css";
+@import "./product-details.css";
+@import "./industries.css";
+@import "./partners.css";
+@import "./contact.css";
+
+
+/* ========================================
+   RESPONSIVE STYLES
+   MUST BE LAST
+======================================== */
+
+@import "./responsive.css";
