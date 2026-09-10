@@ -1,0 +1,202 @@
+/* ========================================
+   PRODUCTS PAGE — INTRO
+======================================== */
+
+.products-intro-section {
+  background: white;
+}
+
+.products-intro-content {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.products-intro-content h2 {
+  color: var(--primary-color);
+  font-size: 38px;
+  margin: 12px 0 20px;
+}
+
+.products-intro-content p {
+  color: var(--gray);
+  line-height: 1.8;
+  font-size: 16px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   PRODUCTS PAGE — RIBO FEATURED LINE
+======================================== */
+
+.products-page .section-title {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 50px;
+}
+
+.ribo-products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.ribo-products-header h2 {
+  color: var(--primary-color);
+  font-size: 36px;
+  margin: 10px 0 15px;
+}
+
+.ribo-products-header p {
+  color: var(--gray);
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+.ribo-info-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  background: var(--light-color);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+
+  margin-bottom: 50px;
+}
+
+.ribo-info-strip > div {
+  text-align: center;
+}
+
+.ribo-info-strip strong {
+  display: block;
+  color: var(--primary-color);
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.ribo-info-strip span {
+  color: var(--gray);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+
+/* ========================================
+   PRODUCTS PAGE — OTHER SOLUTIONS
+======================================== */
+
+.other-solutions-section {
+  background: var(--light-color);
+}
+
+.other-solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.other-solution-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  padding: 30px 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: 0.3s;
+}
+
+.other-solution-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.solution-card-header {
+  margin-bottom: 20px;
+}
+
+.other-solution-card h3 {
+  color: var(--primary-color);
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.other-solution-card p {
+  color: var(--gray);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.solution-applications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.solution-applications span {
+  background: var(--light-color);
+  color: var(--gray);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border: 1px solid var(--border-color);
+}
+
+.solution-enquiry-link {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.solution-enquiry-link:hover {
+  color: var(--secondary-color);
+}
+
+
+/* ========================================
+   PRODUCTS PAGE — CUSTOM REQUIREMENT BOX
+======================================== */
+
+.custom-requirement-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+
+  background: var(--primary-color);
+  color: white;
+
+  padding: 45px 50px;
+  margin-top: 60px;
+}
+
+.custom-requirement-box .section-subtitle {
+  color: var(--secondary-color);
+}
+
+.custom-requirement-box h3 {
+  color: white;
+  font-size: 26px;
+  margin: 8px 0 12px;
+}
+
+.custom-requirement-box p {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+.custom-requirement-box .btn-primary {
+  white-space: nowrap;
+}
