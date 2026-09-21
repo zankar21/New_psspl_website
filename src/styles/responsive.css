@@ -4,7 +4,9 @@
 
 @media (max-width: 992px) {
 
-  /* General Layout */
+  /* ======================================
+     GENERAL LAYOUT
+  ====================================== */
 
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -14,14 +16,8 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .why-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .about-grid,
+  .why-grid,
   .about-page-grid {
     grid-template-columns: 1fr;
   }
@@ -29,47 +25,76 @@
   .values-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
+
+  /* ======================================
+     INDUSTRIES
+  ====================================== */
+
+  .industries-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .industry-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* ======================================
+     PRODUCTS
+  ====================================== */
+
   .product-details-grid {
-  grid-template-columns: 1fr;
-}
-.industries-page-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
 
-.industry-details-grid {
-  grid-template-columns: 1fr;
-}
+  .product-applications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-.contact-grid {
-  grid-template-columns: 1fr;
-}
 
-.solutions-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
+  /* ======================================
+     CONTACT
+  ====================================== */
 
-.served-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 
-.partners-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
 
-.principals-detail-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
+  /* ======================================
+     PARTNERS
+  ====================================== */
 
-.strategic-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
+  .featured-partner-card {
+    grid-template-columns: 1fr;
+  }
 
-.leadership-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
+  .featured-partner-visual {
+    min-height: 300px;
+  }
 
-  /* Footer */
+  .principals-detail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* ======================================
+     OTHER / LEGACY GRIDS
+  ====================================== */
+
+  .solutions-grid,
+  .served-grid,
+  .partners-grid,
+  .leadership-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* ======================================
+     FOOTER
+  ====================================== */
 
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -84,14 +109,18 @@
 
 @media (max-width: 768px) {
 
-  /* General */
+  /* ======================================
+     GENERAL
+  ====================================== */
 
   .section {
     padding: 60px 0;
   }
 
 
-  /* Navbar */
+  /* ======================================
+     NAVBAR
+  ====================================== */
 
   .navbar {
     height: 70px;
@@ -103,22 +132,17 @@
 
   .nav-menu {
     position: absolute;
-
     top: 70px;
     left: 0;
-
     width: 100%;
 
     background: var(--white);
 
     flex-direction: column;
-
     align-items: flex-start;
-
     gap: 0;
 
     max-height: 0;
-
     overflow: hidden;
 
     transition: max-height 0.4s ease;
@@ -134,91 +158,68 @@
 
   .nav-menu a {
     width: 100%;
-
     padding: 15px 0;
-
     border-bottom: 1px solid var(--border-color);
   }
 
   .nav-menu .contact-button {
     margin-top: 10px;
-
     width: auto;
-
     padding: 12px 20px;
-
     border: none;
   }
 
-  .industries-page-grid {
-  grid-template-columns: 1fr;
-}
 
-  /* Hero */
+  /* ======================================
+     HERO
+  ====================================== */
 
   .hero {
     min-height: 550px;
   }
 
   .hero h1 {
-    font-size: 40px;
+    font-size: 44px;
   }
 
 
-  /* Home Sections */
+  /* ======================================
+     HOME SECTIONS
+  ====================================== */
 
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .industries-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .products-grid,
+  .industries-grid,
   .features-grid {
     grid-template-columns: 1fr;
   }
 
-
-  /* CTA */
-
   .cta-container {
     flex-direction: column;
-
     align-items: flex-start;
   }
 
-  .hero h1 {
-  font-size: 44px;
-}
 
-.products-preview-header {
-  flex-direction: column;
+  /* ======================================
+     ABOUT
+  ====================================== */
 
-  align-items: flex-start;
-
-  gap: 20px;
-}
-
-
-  /* Footer */
-
-  .footer-grid {
+  .mission-grid {
     grid-template-columns: 1fr;
+  }
 
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
   }
 
-  .footer-bottom {
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 15px;
+  .stats-grid div {
+    border-right: none;
   }
 
 
-  /* Page Hero */
+  /* ======================================
+     PAGE HERO
+  ====================================== */
 
   .page-hero {
     padding: 70px 0;
@@ -229,195 +230,27 @@
   }
 
 
-  /* About Page */
+  /* ======================================
+     PRODUCTS
+  ====================================== */
 
-  .mission-grid {
-    grid-template-columns: 1fr;
+  .product-details-placeholder {
+    min-height: 350px;
   }
 
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 40px;
-  }
-
-  .stats-grid div {
-    border-right: none;
-  }
-
-}
-
-
-/* ========================================
-   SMALL MOBILE - 500px
-======================================== */
-
-@media (max-width: 500px) {
-
-  /* Hero */
-
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .hero-description {
-    font-size: 16px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-
-    align-items: flex-start;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-
-    text-align: center;
-  }
-
-
-  /* Section Titles */
-
-  .section-title h2 {
-    font-size: 30px;
-  }
-
-
-  /* Page Hero */
-
-  .page-hero h1 {
-    font-size: 32px;
-  }
-
-
-  /* About Page */
-
-  .values-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-page-image .image-placeholder {
-    height: 300px;
-  }
-
-
-  /* Statistics */
-
-  .stats-grid strong {
+  .product-details-content h2 {
     font-size: 36px;
   }
 
-  .industry-details-image {
-  height: 300px;
-}
-
-.industry-details-content h1 {
-  font-size: 32px;
-}
-
-.contact-form-wrapper {
-  padding: 25px;
-}
-
-.form-grid {
-  grid-template-columns: 1fr;
-}
-
-.contact-information h2 {
-  font-size: 30px;
-}
-
-.solutions-grid {
-  grid-template-columns: 1fr;
-}
-
-.served-grid {
-  grid-template-columns: 1fr;
-}
-
-.hero h1 {
-  font-size: 34px;
-}
-
-.products-preview-header h2,
-.industries-served-header h2 {
-  font-size: 30px;
-}
-
-.partners-grid {
-  grid-template-columns: 1fr;
-}
-
-.principals-header h2 {
-  font-size: 30px;
-}
-
-.principals-detail-grid,
-.strategic-grid {
-  grid-template-columns: 1fr;
-}
-
-.page-header h1 {
-  font-size: 32px;
-}
-
-.featured-partner-card {
-  padding: 30px 24px;
-}
-
-.leadership-grid {
-  grid-template-columns: 1fr;
-}
-
-  /* Footer */
-
-  .footer-legal {
-    flex-wrap: wrap;
-
-    gap: 10px 20px;
-  }
-  .product-details-image {
-  height: 300px;
-}
-
-.product-details-content h1 {
-  font-size: 32px;
-}
-
-}
-
-/* ========================================
-   PARTNERS PAGE RESPONSIVE
-======================================== */
-
-@media (max-width: 992px) {
-
-  .featured-partner-card {
-    grid-template-columns: 1fr;
+  .product-enquiry-inner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .featured-partner-visual {
-    min-height: 300px;
-  }
 
-  .principals-detail-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-
-@media (max-width: 768px) {
-
-  .page-header {
-    padding: 80px 0 60px;
-  }
-
-  .page-header h1 {
-    font-size: 40px;
-  }
+  /* ======================================
+     PARTNERS
+  ====================================== */
 
   .featured-partner-content {
     padding: 45px 35px;
@@ -434,19 +267,169 @@
 
   .partners-cta-inner {
     flex-direction: column;
-
     align-items: flex-start;
+  }
+
+
+  /* ======================================
+     FOOTER
+  ====================================== */
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
   }
 
 }
 
 
-@media (max-width: 600px) {
+/* ========================================
+   SMALL MOBILE - 500px
+======================================== */
 
-  .principals-detail-grid {
+@media (max-width: 500px) {
+
+  /* ======================================
+     HERO
+  ====================================== */
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+
+  /* ======================================
+     SECTION TITLES
+  ====================================== */
+
+  .section-title h2 {
+    font-size: 30px;
+  }
+
+
+  /* ======================================
+     PAGE HERO
+  ====================================== */
+
+  .page-hero {
+    padding: 60px 0;
+  }
+
+  .page-hero h1 {
+    font-size: 32px;
+  }
+
+
+  /* ======================================
+     ABOUT
+  ====================================== */
+
+  .values-grid {
     grid-template-columns: 1fr;
   }
 
+  .about-page-image .image-placeholder {
+    height: 300px;
+  }
+
+  .stats-grid strong {
+    font-size: 36px;
+  }
+
+
+  /* ======================================
+     INDUSTRIES
+  ====================================== */
+
+  .industries-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .industry-details-image {
+    min-height: 300px;
+  }
+
+  .industry-details-content h2 {
+    font-size: 32px;
+  }
+
+
+  /* ======================================
+     PRODUCTS
+  ====================================== */
+
+  .product-applications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-details-placeholder {
+    min-height: 280px;
+  }
+
+  .product-details-content h2 {
+    font-size: 30px;
+  }
+
+  .product-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-actions .btn-primary,
+  .product-actions .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+
+  /* ======================================
+     CONTACT
+  ====================================== */
+
+  .contact-form-wrapper {
+    padding: 25px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-information h2 {
+    font-size: 30px;
+  }
+
+  .submit-button {
+    width: 100%;
+    text-align: center;
+  }
+
+
+  /* ======================================
+     PARTNERS
+  ====================================== */
+
+  .principals-detail-grid,
   .strategic-grid {
     grid-template-columns: 1fr;
   }
@@ -467,74 +450,32 @@
     font-size: 30px;
   }
 
-  .page-header h1 {
-    font-size: 34px;
-  }
-
   .partners-intro-content h2,
   .section-heading-center h2,
   .partners-cta-inner h2 {
     font-size: 28px;
   }
 
-}
 
-/* ========================================
-   PRODUCT DETAILS RESPONSIVE
-======================================== */
+  /* ======================================
+     LEGACY / OTHER GRIDS
+  ====================================== */
 
-@media (max-width: 992px) {
-
-  .product-details-grid {
-    grid-template-columns: 1fr;
-
-    gap: 50px;
-  }
-
-  .product-applications-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-
-@media (max-width: 768px) {
-
-  .product-details-placeholder {
-    min-height: 350px;
-  }
-
-  .product-details-content h2 {
-    font-size: 36px;
-  }
-
-  .product-enquiry-inner {
-    flex-direction: column;
-
-    align-items: flex-start;
-  }
-
-}
-
-
-@media (max-width: 500px) {
-
-  .product-applications-grid {
+  .solutions-grid,
+  .served-grid,
+  .partners-grid,
+  .leadership-grid {
     grid-template-columns: 1fr;
   }
 
-  .product-details-placeholder {
-    min-height: 280px;
-  }
 
-  .product-visual-content h2 {
-    font-size: 30px;
-  }
+  /* ======================================
+     FOOTER
+  ====================================== */
 
-  .product-actions {
-    flex-direction: column;
-
-    align-items: flex-start;
+  .footer-legal {
+    flex-wrap: wrap;
+    gap: 10px 20px;
   }
 
 }

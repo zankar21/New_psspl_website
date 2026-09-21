@@ -1,125 +1,163 @@
 /* ========================================
-   PRODUCTS PAGE — INTRO
+   PRODUCTS PAGE
 ======================================== */
 
 .products-intro-section {
-  background: white;
+  background: var(--white);
 }
 
 .products-intro-content {
-  max-width: 850px;
+  max-width: 800px;
   margin: 0 auto;
   text-align: center;
-}
-
-.products-intro-content h2 {
-  color: var(--primary-color);
-  font-size: 38px;
-  margin: 12px 0 20px;
 }
 
 .products-intro-content p {
   color: var(--gray);
   line-height: 1.8;
-  font-size: 16px;
-  max-width: 760px;
-  margin: 0 auto;
 }
 
 
 /* ========================================
-   PRODUCTS PAGE — RIBO FEATURED LINE
+   RIBO PRODUCTS
 ======================================== */
-
-.products-page .section-title {
-  text-align: center;
-  max-width: 750px;
-  margin: 0 auto 50px;
-}
 
 .ribo-products-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
+  align-items: flex-end;
+  gap: 30px;
   margin-bottom: 40px;
 }
 
-.ribo-products-header h2 {
-  color: var(--primary-color);
-  font-size: 36px;
-  margin: 10px 0 15px;
-}
-
-.ribo-products-header p {
-  color: var(--gray);
-  line-height: 1.8;
-  max-width: 600px;
-}
-
 .ribo-info-strip {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-
   background: var(--light-color);
-  border: 1px solid var(--border-color);
-  padding: 30px;
-
-  margin-bottom: 50px;
+  border-left: 4px solid var(--secondary-color);
+  padding: 20px 25px;
+  margin-bottom: 35px;
 }
 
-.ribo-info-strip > div {
-  text-align: center;
-}
-
-.ribo-info-strip strong {
-  display: block;
-  color: var(--primary-color);
-  font-size: 20px;
-  margin-bottom: 6px;
-}
-
-.ribo-info-strip span {
+.ribo-info-strip p {
   color: var(--gray);
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  line-height: 1.7;
 }
 
 
 /* ========================================
-   PRODUCTS PAGE — OTHER SOLUTIONS
+   PRODUCT GRID
 ======================================== */
 
-.other-solutions-section {
-  background: var(--light-color);
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
 }
+
+.product-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.product-image {
+  height: 180px;
+  background: #dce3ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--gray);
+}
+
+.product-image-placeholder {
+  text-align: center;
+}
+
+.product-image-label {
+  display: block;
+  font-size: 12px;
+  color: var(--gray);
+  margin-bottom: 8px;
+}
+
+.product-image-name {
+  display: block;
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.product-content {
+  padding: 25px;
+}
+
+.product-category {
+  font-size: 12px;
+  color: var(--secondary-color);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.product-content h3 {
+  font-size: 21px;
+  margin: 10px 0;
+  color: var(--primary-color);
+}
+
+.product-content p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--gray);
+}
+
+.product-link {
+  margin-top: 20px;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-block;
+}
+
+
+/* ========================================
+   OTHER PRODUCTS & SOLUTIONS
+======================================== */
 
 .other-solutions-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 25px;
 }
 
 .other-solution-card {
-  background: white;
+  padding: 30px;
   border: 1px solid var(--border-color);
-  padding: 30px 25px;
-
-  display: flex;
-  flex-direction: column;
-
   transition: 0.3s;
 }
 
 .other-solution-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transform: translateY(-6px);
+  border-color: var(--secondary-color);
 }
 
 .solution-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   margin-bottom: 20px;
+}
+
+.solution-number {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--secondary-color);
 }
 
 .other-solution-card h3 {
@@ -132,71 +170,43 @@
   color: var(--gray);
   font-size: 14px;
   line-height: 1.7;
-  margin-bottom: 20px;
-  flex-grow: 1;
 }
 
 .solution-applications {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.solution-applications span {
-  background: var(--light-color);
-  color: var(--gray);
-  font-size: 11px;
+  margin-top: 20px;
+  color: var(--primary-color);
+  font-size: 13px;
   font-weight: 600;
-  padding: 5px 10px;
-  border: 1px solid var(--border-color);
 }
 
 .solution-enquiry-link {
-  color: var(--primary-color);
-  font-weight: 700;
-  font-size: 14px;
-  margin-top: auto;
-}
-
-.solution-enquiry-link:hover {
+  display: inline-block;
+  margin-top: 20px;
   color: var(--secondary-color);
+  font-size: 14px;
+  font-weight: 700;
 }
 
 
 /* ========================================
-   PRODUCTS PAGE — CUSTOM REQUIREMENT BOX
+   CUSTOM REQUIREMENT
 ======================================== */
 
 .custom-requirement-box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-
+  margin-top: 50px;
+  padding: 40px;
   background: var(--primary-color);
-  color: white;
-
-  padding: 45px 50px;
-  margin-top: 60px;
-}
-
-.custom-requirement-box .section-subtitle {
-  color: var(--secondary-color);
+  color: var(--white);
+  text-align: center;
 }
 
 .custom-requirement-box h3 {
-  color: white;
   font-size: 26px;
-  margin: 8px 0 12px;
+  margin-bottom: 12px;
 }
 
 .custom-requirement-box p {
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.8;
-  max-width: 600px;
-}
-
-.custom-requirement-box .btn-primary {
-  white-space: nowrap;
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 25px;
 }

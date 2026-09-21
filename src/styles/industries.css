@@ -3,105 +3,67 @@
 ======================================== */
 
 .industries-page {
-  background: var(--light-color);
+  background: var(--white);
 }
 
 .industries-page .section-title {
-  text-align: center;
   max-width: 750px;
-  margin: 0 auto 50px;
+  margin-bottom: 50px;
 }
 
 .industries-page-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
 
 
-/* INDUSTRY CARD */
-
-.industry-page-card {
-  background: white;
-  padding: 35px;
-  border: 1px solid var(--border-color);
-  position: relative;
-  transition: 0.3s;
-}
-
-.industry-page-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-  border-color: var(--secondary-color);
-}
-
-.industry-card-number {
-  display: block;
-  color: var(--secondary-color);
-  font-size: 32px;
-  font-weight: 800;
-  margin-bottom: 25px;
-}
-
-.industry-category {
-  color: var(--secondary-color);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-.industry-page-card h3 {
-  color: var(--primary-color);
-  font-size: 24px;
-  margin: 12px 0 15px;
-}
-
-.industry-page-card p {
-  color: var(--gray);
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-.industry-link {
-  display: inline-block;
-  margin-top: 20px;
-  color: var(--primary-color);
-  font-weight: 700;
-}
-
-.industry-link:hover {
-  color: var(--secondary-color);
-}
-
-
 /* ========================================
-   INDUSTRY DETAILS PAGE
+   INDUSTRY DETAILS
 ======================================== */
+
+.industry-details {
+  background: var(--white);
+}
 
 .industry-details-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 70px;
-  align-items: center;
+  align-items: start;
 }
 
 .industry-details-image {
-  height: 450px;
-  background: #dce3ea;
-
+  min-height: 450px;
+  background: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
-
-  color: var(--gray);
-  font-size: 14px;
+  color: var(--white);
+  font-size: 18px;
   font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.industry-details-content {
+  padding-top: 10px;
+}
+
+.industry-category {
+  display: block;
+  color: var(--secondary-color);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
 .industry-details-content h2 {
   color: var(--primary-color);
-  font-size: 42px;
-  margin: 15px 0 20px;
+  font-size: 38px;
+  line-height: 1.3;
+  margin-bottom: 20px;
 }
 
 .industry-description {
@@ -112,15 +74,106 @@
 
 .industry-details-content h3 {
   color: var(--primary-color);
-  margin-bottom: 15px;
+  font-size: 22px;
+  margin-bottom: 18px;
 }
 
 .industry-applications {
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 35px;
 }
 
 .industry-applications li {
   color: var(--gray);
-  margin-bottom: 12px;
+  font-size: 14px;
   line-height: 1.6;
+  padding: 12px 15px;
+  background: var(--light-color);
+  border-left: 3px solid var(--secondary-color);
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1000px) {
+
+  .industries-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .industry-details-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .industries-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .industry-details-image {
+    min-height: 300px;
+  }
+
+  .industry-details-content h2 {
+    font-size: 30px;
+  }
+
+}
+
+/* ========================================
+   INDUSTRY CARDS - INNER PAGE
+======================================== */
+
+.industries-page-grid .industry-card {
+  padding: 30px;
+  border: 1px solid var(--border-color);
+  background: var(--white);
+  transition: 0.3s ease;
+}
+
+.industries-page-grid .industry-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--secondary-color);
+  box-shadow: 0 12px 30px rgba(11, 45, 77, 0.08);
+}
+
+.industries-page-grid .industry-number {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--secondary-color);
+  margin-bottom: 12px;
+}
+
+.industries-page-grid .industry-card h3 {
+  color: var(--primary-color);
+  font-size: 21px;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.industries-page-grid .industry-card p {
+  color: var(--gray);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.industries-page-grid .industry-card a {
+  display: inline-block;
+  color: var(--primary-color);
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.industries-page-grid .industry-card a:hover {
+  color: var(--secondary-color);
 }

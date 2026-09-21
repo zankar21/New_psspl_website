@@ -4,40 +4,34 @@
 
 .footer {
   background: #081f35;
-
   color: #cbd5e1;
-
   padding-top: 70px;
 }
 
 
+/* ========================================
+   FOOTER GRID
+======================================== */
+
 .footer-grid {
   display: grid;
-
-  grid-template-columns:
-    1.5fr
-    1fr
-    1fr
-    1.3fr;
-
+  grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
   gap: 50px;
-
   padding-bottom: 60px;
 }
 
 
-/* COMPANY */
+/* ========================================
+   COMPANY
+======================================== */
 
 .footer-logo {
   display: inline-block;
-
   font-size: 24px;
-
   font-weight: 800;
-
-  color: white;
-
+  color: var(--white);
   margin-bottom: 20px;
+  letter-spacing: 0.3px;
 }
 
 .footer-logo span {
@@ -46,20 +40,13 @@
 
 .footer-company p {
   font-size: 14px;
-
   line-height: 1.8;
-
   max-width: 320px;
 }
 
-
-/* SOCIAL MEDIA */
-
 .social-links {
   display: flex;
-
   gap: 12px;
-
   margin-top: 25px;
 }
 
@@ -68,45 +55,42 @@
   height: 38px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  color: var(--white);
 
   transition: 0.3s;
 }
 
 .social-links a:hover {
   background: var(--secondary-color);
-
   border-color: var(--secondary-color);
-
-  color: white;
+  color: var(--white);
 }
 
 
-/* FOOTER COLUMNS */
+/* ========================================
+   FOOTER COLUMNS
+======================================== */
 
 .footer-column h3 {
-  color: white;
-
+  color: var(--white);
   font-size: 17px;
-
   margin-bottom: 25px;
 }
 
 .footer-column ul {
   display: flex;
-
   flex-direction: column;
-
   gap: 14px;
 }
 
 .footer-column li {
   font-size: 14px;
-
+  line-height: 1.5;
   transition: 0.3s;
 }
 
@@ -114,59 +98,111 @@
   color: var(--secondary-color);
 }
 
+.footer-column li a {
+  transition: 0.3s;
+}
 
-/* CONTACT INFO */
+.footer-column li a:hover {
+  color: var(--secondary-color);
+}
+
+
+/* ========================================
+   CONTACT INFORMATION
+======================================== */
 
 .contact-info {
   display: flex;
-
   flex-direction: column;
-
   gap: 18px;
 }
 
 .contact-info div {
   display: flex;
-
   align-items: flex-start;
-
   gap: 12px;
 
   font-size: 14px;
-
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .contact-info svg {
+  flex-shrink: 0;
   color: var(--secondary-color);
-
-  margin-top: 3px;
+  margin-top: 4px;
 }
 
 
-/* FOOTER BOTTOM */
+/* ========================================
+   FOOTER BOTTOM
+======================================== */
 
 .footer-bottom {
-  border-top:
-    1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 
   padding: 25px 0;
 
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
+
+  gap: 20px;
 
   font-size: 13px;
 }
 
+.footer-bottom p {
+  line-height: 1.6;
+}
+
 .footer-legal {
   display: flex;
-
   gap: 20px;
+}
+
+.footer-legal a {
+  transition: 0.3s;
 }
 
 .footer-legal a:hover {
   color: var(--secondary-color);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding-top: 55px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-bottom: 45px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .footer-company p {
+    max-width: 100%;
+  }
+
+  .footer-legal {
+    flex-wrap: wrap;
+    gap: 10px 20px;
+  }
+
 }

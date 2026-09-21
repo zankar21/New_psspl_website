@@ -13,7 +13,7 @@ function IndustriesPreview() {
           description="Our products serve industries where reliability and performance are essential."
         />
 
-        <div className="industries-grid">
+        <div className="industries-scroll">
 
           {industries.map((industry) => (
 
