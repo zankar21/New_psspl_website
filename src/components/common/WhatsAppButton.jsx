@@ -5,7 +5,7 @@ function WhatsAppButton() {
   const message = "Hello, I'm interested in PSSPL's products and services.";
 
   return (
-    
+    <a
       href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
       className="whatsapp-float"
       target="_blank"

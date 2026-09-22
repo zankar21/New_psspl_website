@@ -1,128 +1,100 @@
 import { Link } from "react-router-dom";
+import {
+  principals,
+  industryRelationships,
+  strategicPartners,
+  getPrincipalRelationship
+} from "../../data/principals";
+import { products } from "../../data/products";
 
 function PrincipalsPartners() {
-  const partners = [
-    {
-      name: "RIBO Industries",
-      role: "Maharashtra Distributor — Boiler Pressure Parts",
-      featured: true
-    },
-    {
-      name: "Bharat Bijlee",
-      role: "Service & Maintenance Products",
-      logo: "/vendor-logos/bharat-bijlee.png"
-    },
-    {
-      name: "Electrotherm India Ltd",
-      role: "Transformer Division",
-      logo: "/vendor-logos/electrotherm.png"
-    },
-    {
-      name: "Astral Pipes",
-      role: "Industrial Grade Piping",
-      logo: "/vendor-logos/astral.png"
-    },
-    {
-      name: "Neeco Engineering Servicing Pvt. Ltd.",
-      role: "Engineering & Servicing",
-      logo: "/vendor-logos/neeco.png"
-    },
-    {
-      name: "Hydro Care Engineers Pvt. Ltd.",
-      role: "Engineering & Servicing",
-      logo: "/vendor-logos/hydrocare.png"
-    },
-    {
-      name: "Paharpur Cooling Towers Ltd.",
-      role: "Cooling Tower Systems",
-      logo: "/vendor-logos/paharpur.png"
-    },
-    {
-      name: "Marsh Automation Pvt Ltd",
-      role: "Industrial Automation (German Technology)",
-      logo: "/vendor-logos/marsh.png"
-    },
-    {
-      name: "Ion Exchange India Ltd.",
-      role: "Water & Environment Solutions",
-      logo: "/vendor-logos/ionexchange.png"
-    },
-    {
-      name: "Babu Enterprises",
-      role: "Strategic Business Partner"
-    },
-    {
-      name: "ASMI Engineering",
-      role: "Strategic Business Partner"
-    }
-  ];
-
   return (
     <section className="section principals-partners">
       <div className="container">
-
         <div className="principals-header">
-          <span className="section-subtitle">
-            OUR NETWORK
-          </span>
-
-          <h2>
-            Principals & Partners
-          </h2>
-
+          <span className="section-subtitle">OUR PRINCIPALS</span>
+          <h2>Authorised Partnerships</h2>
           <p>
-            PSSPL works through a network of trusted principals,
-            manufacturers and strategic partners to deliver
-            reliable industrial products and solutions.
+            PSSPL collaborates with established manufacturers and industry
+            partners to deliver reliable products and engineering solutions for
+            critical industrial applications.
           </p>
         </div>
 
-        <div className="partners-scroll">
+        <div className="authorized-principals-grid">
+          {principals.map((principal) => {
+            const principalProducts = principal.productSlugs
+              .map((productSlug) => products.find((product) => product.slug === productSlug))
+              .filter(Boolean);
 
-          {partners.map((partner) => (
+            return (
+              <article className="authorized-principal-card" key={principal.slug}>
+                <div className="authorized-principal-logo">
+                  <img src={principal.logo} alt={`${principal.name} logo`} />
+                </div>
 
-            <div
-              className={
-                partner.featured
-                  ? "partner-card partner-card-featured"
-                  : "partner-card"
-              }
-              key={partner.name}
-            >
+                <div className="authorized-principal-content">
+                  <span className="partner-badge">
+                    {getPrincipalRelationship(principal)}
+                  </span>
 
-              {partner.featured && (
-                <span className="partner-badge">
-                  Featured Partner
-                </span>
-              )}
+                  <h3>{principal.name}</h3>
+                  <p>{principal.description}</p>
 
-              {partner.logo && (
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="partner-logo"
-                />
-              )}
+                  <div className="principal-product-tags" aria-label="Representative products">
+                    {principalProducts.map((product) => (
+                      <span key={product.slug}>{product.name}</span>
+                    ))}
+                  </div>
 
-              <h3>{partner.name}</h3>
+                  <Link to={principal.detailRoute} className="btn-primary">
+                    Explore {principal.name} Products
+                  </Link>
+                </div>
+              </article>
+            );
+          })}
+        </div>
 
-              <p>{partner.role}</p>
+        <div className="industry-relationships">
+          <h3>Industry Relationships</h3>
 
-            </div>
+          <div className="partners-scroll">
+            {industryRelationships.map((relationship) => (
+              <article className="partner-card" key={relationship.name}>
+                {relationship.logo && (
+                  <img
+                    src={relationship.logo}
+                    alt={relationship.name}
+                    className="partner-logo"
+                  />
+                )}
 
-          ))}
+                <h4>{relationship.name}</h4>
+                <p>{relationship.role}</p>
+              </article>
+            ))}
+          </div>
+        </div>
 
+        <div className="strategic-partners-preview">
+          <h3>Strategic Partners</h3>
+
+          <div className="strategic-partners-list">
+            {strategicPartners.map((partner) => (
+              <div key={partner.name}>
+                <strong>{partner.name}</strong>
+                <span>{partner.role}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="principals-cta">
-          <Link
-            to="/partners"
-            className="text-link"
-          >
+          <Link to="/partners" className="text-link">
             View Full Partner Network →
           </Link>
         </div>
-
       </div>
     </section>
   );

@@ -1,18 +1,29 @@
 import { Link } from "react-router-dom";
+import { getPrincipalBySlug } from "../../data/principals";
 
 function ProductCard({ product }) {
+  const principal = getPrincipalBySlug(product.principalSlug);
+
   return (
     <article className="product-card">
 
-      <div className="product-image product-image-placeholder">
+      <div className={`product-image${product.image ? " product-image--asset" : " product-image-placeholder"}`}>
 
-        <span className="product-image-label">
-          RIBO
-        </span>
+        {product.image ? (
+          <img src={product.image} alt={product.name} />
+        ) : (
+          <>
+            {principal && (
+              <span className="product-image-label">
+                {principal.name}
+              </span>
+            )}
 
-        <span className="product-image-name">
-          {product.name}
-        </span>
+            <span className="product-image-name">
+              {product.name}
+            </span>
+          </>
+        )}
 
       </div>
 

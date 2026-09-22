@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 import PageHero from "../components/common/PageHero";
+import { products } from "../data/products";
 
 import {
   FaMapMarkerAlt,
@@ -12,17 +14,23 @@ import {
 
 function Contact() {
 
+  const [searchParams] = useSearchParams();
+  const productSlug = searchParams.get("product");
+  const product = products.find((item) => item.slug === productSlug);
+  const productSubject = product ? `Enquiry about ${product.name}` : "";
+
   const [formData, setFormData] = useState({
     name: "",
     company: "",
     email: "",
     phone: "",
-    subject: "",
+    subject: productSubject,
     message: ""
   });
 
 
-  const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [formMessage, setFormMessage] = useState("");
 
 
   function handleChange(event) {
@@ -34,6 +42,40 @@ function Contact() {
       [name]: value
     });
 
+    setErrors((currentErrors) => {
+      const nextErrors = { ...currentErrors };
+      delete nextErrors[name];
+      return nextErrors;
+    });
+
+    setFormMessage("");
+
+  }
+
+
+  function handleInvalid(event) {
+
+    event.preventDefault();
+
+    const { name, validity } = event.target;
+    const fieldLabels = {
+      name: "full name",
+      email: "email address",
+      phone: "phone number",
+      message: "message"
+    };
+
+    const message = validity.typeMismatch
+      ? "Enter a valid email address."
+      : `Please enter your ${fieldLabels[name]}.`;
+
+    setErrors((currentErrors) => ({
+      ...currentErrors,
+      [name]: message
+    }));
+
+    setFormMessage("validation");
+
   }
 
 
@@ -41,35 +83,8 @@ function Contact() {
 
     event.preventDefault();
 
-
-    if (
-      !formData.name ||
-      !formData.email ||
-      !formData.phone ||
-      !formData.message
-    ) {
-
-      alert("Please fill all required fields.");
-
-      return;
-
-    }
-
-
-    console.log("Enquiry Submitted:", formData);
-
-
-    setSubmitted(true);
-
-
-    setFormData({
-      name: "",
-      company: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: ""
-    });
+    setErrors({});
+    setFormMessage("unavailable");
 
   }
 
@@ -138,7 +153,7 @@ function Contact() {
                   <h4>Phone Number</h4>
 
                   <p>
-                    +91 9850333799
+                    <a href="tel:+919850333799">+91 9850333799</a>
                   </p>
                 </div>
 
@@ -155,7 +170,7 @@ function Contact() {
                   <h4>Email Address</h4>
 
                   <p>
-                    info@pawanssiddhi.in
+                    <a href="mailto:info@pawanssiddhi.in">info@pawanssiddhi.in</a>
                   </p>
                 </div>
 
@@ -193,12 +208,23 @@ function Contact() {
             <h2>Send Us an Enquiry</h2>
 
 
-            {submitted && (
+            {formMessage && (
 
-              <div className="success-message">
+              <div
+                className="form-message"
+                role="status"
+                aria-live="polite"
+              >
 
-                Thank you! Your enquiry has been submitted successfully.
-                Our team will contact you soon.
+                {formMessage === "validation" ? (
+                  "Please correct the highlighted fields and try again."
+                ) : (
+                  <>
+                    Online enquiry submission is not available yet. Please{" "}
+                    <a href="tel:+919850333799">call us</a> or{" "}
+                    <a href="mailto:info@pawanssiddhi.in">email us</a> instead.
+                  </>
+                )}
 
               </div>
 
@@ -208,6 +234,7 @@ function Contact() {
             <form
               className="contact-form"
               onSubmit={handleSubmit}
+              onInvalid={handleInvalid}
             >
 
 
@@ -216,28 +243,39 @@ function Contact() {
 
                 <div className="form-group">
 
-                  <label>
+                  <label htmlFor="name">
                     Full Name *
                   </label>
 
                   <input
+                    id="name"
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Enter your name"
+                    required
+                    aria-invalid={Boolean(errors.name)}
+                    aria-describedby={errors.name ? "name-error" : undefined}
                   />
+
+                  {errors.name && (
+                    <p className="form-error" id="name-error">
+                      {errors.name}
+                    </p>
+                  )}
 
                 </div>
 
 
                 <div className="form-group">
 
-                  <label>
+                  <label htmlFor="company">
                     Company Name
                   </label>
 
                   <input
+                    id="company"
                     type="text"
                     name="company"
                     value={formData.company}
@@ -250,34 +288,54 @@ function Contact() {
 
                 <div className="form-group">
 
-                  <label>
+                  <label htmlFor="email">
                     Email Address *
                   </label>
 
                   <input
+                    id="email"
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Enter email address"
+                    required
+                    aria-invalid={Boolean(errors.email)}
+                    aria-describedby={errors.email ? "email-error" : undefined}
                   />
+
+                  {errors.email && (
+                    <p className="form-error" id="email-error">
+                      {errors.email}
+                    </p>
+                  )}
 
                 </div>
 
 
                 <div className="form-group">
 
-                  <label>
+                  <label htmlFor="phone">
                     Phone Number *
                   </label>
 
                   <input
+                    id="phone"
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="Enter phone number"
+                    required
+                    aria-invalid={Boolean(errors.phone)}
+                    aria-describedby={errors.phone ? "phone-error" : undefined}
                   />
+
+                  {errors.phone && (
+                    <p className="form-error" id="phone-error">
+                      {errors.phone}
+                    </p>
+                  )}
 
                 </div>
 
@@ -287,11 +345,12 @@ function Contact() {
 
               <div className="form-group">
 
-                <label>
+                <label htmlFor="subject">
                   Subject
                 </label>
 
                 <input
+                  id="subject"
                   type="text"
                   name="subject"
                   value={formData.subject}
@@ -304,17 +363,27 @@ function Contact() {
 
               <div className="form-group">
 
-                <label>
+                <label htmlFor="message">
                   Message *
                 </label>
 
                 <textarea
+                  id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Tell us about your requirement..."
                   rows="6"
+                  required
+                  aria-invalid={Boolean(errors.message)}
+                  aria-describedby={errors.message ? "message-error" : undefined}
                 />
+
+                {errors.message && (
+                  <p className="form-error" id="message-error">
+                    {errors.message}
+                  </p>
+                )}
 
               </div>
 

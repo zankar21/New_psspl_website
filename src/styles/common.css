@@ -7,7 +7,7 @@
 }
 
 .section-subtitle {
-  color: var(--secondary-color);
+  color: var(--secondary-text-color);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -54,4 +54,34 @@
 .breadcrumb {
   color: #cbd5e1;
   font-size: 14px;
+}
+
+.breadcrumb ol {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.breadcrumb li + li::before {
+  content: "/";
+  margin-right: 8px;
+}
+
+.breadcrumb a:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.not-found-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.not-found-actions .btn-secondary {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 14px 25px;
+  border-radius: 4px;
+  font-weight: 600;
 }

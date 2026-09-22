@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
 import {
-  FaLinkedinIn,
-  FaFacebookF,
-  FaInstagram,
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt
@@ -30,23 +27,6 @@ function Footer() {
               and high-quality boiler pressure products for
               critical industrial applications.
             </p>
-
-
-            <div className="social-links">
-
-              <a href="#">
-                <FaLinkedinIn />
-              </a>
-
-              <a href="#">
-                <FaFacebookF />
-              </a>
-
-              <a href="#">
-                <FaInstagram />
-              </a>
-
-            </div>
 
           </div>
 
@@ -92,13 +72,21 @@ function Footer() {
 
             <ul>
 
-              <li>Boiler Tubes</li>
+              <li>
+                <Link to="/products/boiler-tubes">Boiler Tubes</Link>
+              </li>
 
-              <li>Economiser Coils</li>
+              <li>
+                <Link to="/products/economiser-coils">Economiser Coils</Link>
+              </li>
 
-              <li>Superheater Coils</li>
+              <li>
+                <Link to="/products/superheater-coils">Superheater Coils</Link>
+              </li>
 
-              <li>Water Wall Panels</li>
+              <li>
+                <Link to="/products/water-wall-panels">Water Wall Panels</Link>
+              </li>
 
             </ul>
 
@@ -125,18 +113,18 @@ function Footer() {
               <div>
                 <FaPhoneAlt />
 
-                <span>
+                <a href="tel:+919850333799">
                   +91 9850333799
-                </span>
+                </a>
               </div>
 
 
               <div>
                 <FaEnvelope />
 
-                <span>
+                <a href="mailto:info@pawanssiddhi.in">
                   info@pawanssiddhi.in
-                </span>
+                </a>
               </div>
 
             </div>
@@ -154,19 +142,6 @@ function Footer() {
             © {new Date().getFullYear()} Pawanssiddhi Supplier Pvt Ltd.
             All Rights Reserved.
           </p>
-
-          <div className="footer-legal">
-
-            <Link to="#">
-              Privacy Policy
-            </Link>
-
-            <Link to="#">
-              Terms & Conditions
-            </Link>
-
-          </div>
-
         </div>
 
       </div>

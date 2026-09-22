@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
+import ScrollToTop from "./components/common/ScrollToTop";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -10,12 +11,15 @@ import ProductDetails from "./pages/ProductDetails";
 import Industries from "./pages/Industries";
 import IndustryDetails from "./pages/IndustryDetails";
 import Partners from "./pages/Partners";
+import PrincipalDetails from "./pages/PrincipalDetails";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 function App() {
   return (
     <BrowserRouter>
+
+      <ScrollToTop />
 
       <Navbar />
 
@@ -28,6 +32,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/industries" element={<Industries />} />
           <Route path="/partners" element={<Partners />} />
+          <Route path="/partners/:slug" element={<PrincipalDetails />} />
           <Route path="/contact" element={<Contact />} />
 
           {/* Product Details */}

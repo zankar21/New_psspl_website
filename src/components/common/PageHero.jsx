@@ -1,4 +1,11 @@
-function PageHero({ title, subtitle }) {
+import Breadcrumbs from "./Breadcrumbs";
+
+function PageHero({ title, subtitle, breadcrumbs }) {
+  const breadcrumbItems = breadcrumbs ?? [
+    { label: "Home", to: "/" },
+    { label: title }
+  ];
+
   return (
     <section className="page-hero">
       <div className="container">
@@ -9,9 +16,7 @@ function PageHero({ title, subtitle }) {
 
         <h1>{title}</h1>
 
-        <div className="breadcrumb">
-          Home / {title}
-        </div>
+        <Breadcrumbs items={breadcrumbItems} />
 
       </div>
     </section>

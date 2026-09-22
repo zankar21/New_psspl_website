@@ -9,28 +9,24 @@
   align-items: center;
   overflow: hidden;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(10, 25, 47, 0.95),
-      rgba(10, 25, 47, 0.78)
-    ),
-    url("/images/hero-industrial.jpg");
+  background-image: url("/images/pawanssiddhi-hero.webp");
 
   background-size: cover;
-  background-position: center;
+  background-position: 50% center;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(8, 20, 38, 0.55),
-      transparent
-    );
+  background: linear-gradient(
+    90deg,
+    rgba(8, 20, 38, 0.86) 0%,
+    rgba(8, 20, 38, 0.76) 40%,
+    rgba(8, 20, 38, 0.42) 62%,
+    rgba(8, 20, 38, 0.12) 82%,
+    rgba(8, 20, 38, 0) 100%
+  );
 }
 
 .hero-container {
@@ -77,6 +73,22 @@
   display: flex;
   gap: 15px;
   align-items: center;
+}
+
+.hero .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  background: var(--secondary-color);
+  color: var(--white);
+  border-radius: 4px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.hero .btn-primary:hover {
+  background: var(--primary-color);
 }
 
 .btn-outline {
@@ -263,6 +275,96 @@
   line-height: 1.8;
 }
 
+.authorized-principals-grid {
+  display: grid;
+  gap: 30px;
+}
+
+.authorized-principal-card {
+  display: grid;
+  grid-template-columns: minmax(300px, 36%) minmax(0, 1fr);
+  background: var(--light-color);
+  border: 1px solid var(--border-color);
+}
+
+.authorized-principal-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 42px;
+  background: var(--white);
+}
+
+.authorized-principal-logo img {
+  width: min(100%, 270px);
+  height: auto;
+  object-fit: contain;
+}
+
+.authorized-principal-content {
+  padding: 40px 45px;
+}
+
+.authorized-principal-content h3,
+.industry-relationships h3,
+.strategic-partners-preview h3 {
+  color: var(--primary-color);
+}
+
+.authorized-principal-content h3 {
+  font-size: 30px;
+  margin: 14px 0 12px;
+}
+
+.authorized-principal-content > p {
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+.principal-product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0 28px;
+}
+
+.principal-product-tags span {
+  border: 1px solid var(--border-color);
+  background: var(--white);
+  color: var(--primary-color);
+  padding: 7px 11px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.authorized-principal-content .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 25px;
+  border-radius: 4px;
+  background: var(--secondary-color);
+  color: var(--white);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.authorized-principal-content .btn-primary:hover {
+  background: var(--primary-color);
+}
+
+.industry-relationships,
+.strategic-partners-preview {
+  margin-top: 55px;
+}
+
+.industry-relationships > h3,
+.strategic-partners-preview > h3 {
+  font-size: 22px;
+  margin-bottom: 22px;
+}
+
 .partners-scroll {
   display: flex;
   gap: 20px;
@@ -320,6 +422,13 @@
   line-height: 1.4;
 }
 
+.partner-card h4 {
+  color: var(--primary-color);
+  font-size: 17px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
 .partner-card-featured h3 {
   color: white;
 }
@@ -332,6 +441,33 @@
 
 .partner-card-featured p {
   color: rgba(255, 255, 255, 0.75);
+}
+
+.strategic-partners-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.strategic-partners-list div {
+  border-left: 3px solid var(--secondary-color);
+  padding: 14px 18px;
+  background: var(--light-color);
+}
+
+.strategic-partners-list strong,
+.strategic-partners-list span {
+  display: block;
+}
+
+.strategic-partners-list strong {
+  color: var(--primary-color);
+  margin-bottom: 4px;
+}
+
+.strategic-partners-list span {
+  color: var(--gray);
+  font-size: 13px;
 }
 
 .principals-cta {
@@ -357,6 +493,10 @@
 
 .industries-preview .section-title h2 {
   color: white;
+}
+
+.industries-preview .section-subtitle {
+  color: var(--secondary-color);
 }
 
 .industries-preview .section-description {

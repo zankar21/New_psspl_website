@@ -51,7 +51,7 @@
 
 .industry-category {
   display: block;
-  color: var(--secondary-color);
+  color: var(--secondary-text-color);
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 2px;

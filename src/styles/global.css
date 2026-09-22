@@ -176,8 +176,7 @@ h1, h2, h3, h4 {
       90deg,
       rgba(10, 25, 47, 0.95),
       rgba(10, 25, 47, 0.78)
-    ),
-    url("/images/hero-industrial.jpg");
+    );
 
   background-size: cover;
 
@@ -1790,8 +1789,7 @@ h1, h2, h3, h4 {
       90deg,
       rgba(8, 20, 38, 0.94),
       rgba(8, 20, 38, 0.8)
-    ),
-    url("/images/hero-industrial.jpg") center/cover no-repeat;
+    );
   color: white;
   padding: 120px 0 90px;
   text-align: left;

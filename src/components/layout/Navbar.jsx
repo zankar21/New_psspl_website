@@ -23,7 +23,10 @@ function Navbar() {
         </Link>
 
         {/* Navigation */}
-        <nav className={isOpen ? "nav-menu active" : "nav-menu"}>
+        <nav
+          id="primary-navigation"
+          className={isOpen ? "nav-menu active" : "nav-menu"}
+        >
 
           <NavLink to="/" onClick={closeMenu}>
             Home
@@ -60,6 +63,8 @@ function Navbar() {
           className="menu-toggle"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Navigation"
+          aria-expanded={isOpen}
+          aria-controls="primary-navigation"
         >
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>

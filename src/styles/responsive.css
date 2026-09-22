@@ -4,6 +4,10 @@
 
 @media (max-width: 992px) {
 
+  .hero {
+    background-position: 52% center;
+  }
+
   /* ======================================
      GENERAL LAYOUT
   ====================================== */
@@ -18,8 +22,14 @@
 
   .about-grid,
   .why-grid,
-  .about-page-grid {
+  .about-page-grid,
+  .authorized-principal-card {
     grid-template-columns: 1fr;
+  }
+
+  .authorized-principal-logo {
+    min-height: 210px;
+    padding: 38px;
   }
 
   .values-grid {
@@ -126,8 +136,27 @@
     height: 70px;
   }
 
+  .navbar-container {
+    gap: 12px;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 1.15;
+    letter-spacing: 0.3px;
+  }
+
+  .logo span {
+    font-size: 11px;
+    letter-spacing: 0.2px;
+  }
+
   .menu-toggle {
     display: block;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   .nav-menu {
@@ -176,6 +205,17 @@
 
   .hero {
     min-height: 550px;
+    background-position: 54% center;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(8, 20, 38, 0.88) 0%,
+      rgba(8, 20, 38, 0.76) 58%,
+      rgba(8, 20, 38, 0.42) 82%,
+      rgba(8, 20, 38, 0.18) 100%
+    );
   }
 
   .hero h1 {
@@ -189,7 +229,8 @@
 
   .products-grid,
   .industries-grid,
-  .features-grid {
+  .features-grid,
+  .strategic-partners-list {
     grid-template-columns: 1fr;
   }
 
@@ -303,6 +344,32 @@
     font-size: 32px;
   }
 
+  .hero {
+    background-position: 52% center;
+  }
+
+  .authorized-principal-logo,
+  .authorized-principal-content {
+    padding: 30px 25px;
+  }
+
+  .authorized-principal-logo {
+    min-height: 170px;
+  }
+
+  .authorized-principal-logo img {
+    width: min(100%, 240px);
+  }
+
+  .authorized-principal-content h3 {
+    font-size: 28px;
+  }
+
+  .authorized-principal-content .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
   .hero-description {
     font-size: 16px;
   }
@@ -313,7 +380,8 @@
   }
 
   .hero-buttons .btn-primary,
-  .hero-buttons .btn-secondary {
+  .hero-buttons .btn-secondary,
+  .hero-buttons .btn-outline {
     width: 100%;
     text-align: center;
   }
@@ -476,6 +544,17 @@
   .footer-legal {
     flex-wrap: wrap;
     gap: 10px 20px;
+  }
+
+  .not-found-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .not-found-actions .btn-primary,
+  .not-found-actions .btn-secondary {
+    width: 100%;
+    text-align: center;
   }
 
 }

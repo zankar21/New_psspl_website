@@ -5,11 +5,24 @@ import SectionTitle from "../components/common/SectionTitle";
 import ProductCard from "../components/products/ProductCard";
 
 import { products } from "../data/products";
+import {
+  principals,
+  getPrincipalRelationship
+} from "../data/principals";
 
 import CTA from "../components/home/CTA";
 
 
 function Products() {
+
+  const principalProductGroups = principals
+    .map((principal) => ({
+      principal,
+      products: products.filter(
+        (product) => product.principalSlug === principal.slug
+      )
+    }))
+    .filter((group) => group.products.length > 0);
 
   const otherSolutions = [
     {
@@ -106,14 +119,17 @@ function Products() {
       </section>
 
 
-      {/* ================= RIBO FEATURED PRODUCT LINE ================= */}
+      {/* ================= PRINCIPAL PRODUCT LINES ================= */}
 
       <section className="section products-page">
 
         <div className="container">
 
 
-          <div className="ribo-products-header">
+          {principalProductGroups.map(({ principal, products: principalProducts }) => (
+            <div className="principal-products-group" key={principal.slug}>
+
+          <div className="principal-products-header">
 
             <div>
 
@@ -121,16 +137,9 @@ function Products() {
                 FEATURED PRODUCT LINE
               </span>
 
-              <h2>
-                Boiler Pressure Parts
-              </h2>
+              <h2>{principal.productCategories.join(" & ")}</h2>
 
-              <p>
-                Through our Maharashtra distributorship with
-                RIBO Industries, PSSPL supplies high-pressure
-                boiler components and engineered pressure parts
-                for power generation and process industries.
-              </p>
+              <p>{principal.description}</p>
 
             </div>
 
@@ -139,29 +148,29 @@ function Products() {
               to="/partners"
               className="text-link"
             >
-              About Our RIBO Partnership →
+              About {principal.name} →
             </Link>
 
           </div>
 
 
-          {/* RIBO INFO STRIP */}
+          {/* PRINCIPAL INFO STRIP */}
 
-          <div className="ribo-info-strip">
+          <div className="principal-info-strip">
 
             <div>
-              <strong>RIBO Industries</strong>
-              <span>Manufacturing Partner</span>
+              <strong>{principal.name}</strong>
+              <span>Authorized Partnership</span>
             </div>
 
             <div>
-              <strong>Maharashtra</strong>
-              <span>Distribution Territory</span>
+              <strong>{getPrincipalRelationship(principal)}</strong>
+              <span>Relationship</span>
             </div>
 
             <div>
-              <strong>Boiler Pressure Parts</strong>
-              <span>Featured Product Category</span>
+              <strong>{principal.productCategories.join(" & ")}</strong>
+              <span>Product Category</span>
             </div>
 
           </div>
@@ -171,7 +180,7 @@ function Products() {
 
           <div className="products-grid products-page-grid">
 
-            {products.map((product) => (
+            {principalProducts.map((product) => (
 
               <ProductCard
                 key={product.id}
@@ -181,6 +190,9 @@ function Products() {
             ))}
 
           </div>
+
+            </div>
+          ))}
 
         </div>
 

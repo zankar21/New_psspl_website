@@ -9,8 +9,7 @@
       90deg,
       rgba(8, 20, 38, 0.94),
       rgba(8, 20, 38, 0.8)
-    ),
-    url("/images/hero-industrial.jpg") center/cover no-repeat;
+    );
   color: var(--white);
   padding: 90px 0;
   text-align: center;
@@ -108,6 +107,13 @@
   padding: 50px;
 }
 
+.featured-principal-logo {
+  width: min(100%, 360px);
+  height: auto;
+  background: var(--white);
+  object-fit: contain;
+}
+
 .featured-partner-logo {
   text-align: center;
   color: var(--white);
@@ -138,7 +144,7 @@
 }
 
 .featured-partner-role {
-  color: var(--secondary-color);
+  color: var(--secondary-text-color);
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 2px;
@@ -269,7 +275,7 @@
 
 .principal-role {
   display: block;
-  color: var(--secondary-color);
+  color: var(--secondary-text-color);
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 1px;
