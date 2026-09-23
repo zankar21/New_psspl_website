@@ -145,7 +145,7 @@ function Products() {
 
 
             <Link
-              to="/partners"
+              to={principal.detailRoute}
               className="text-link"
             >
               About {principal.name} →
@@ -160,12 +160,12 @@ function Products() {
 
             <div>
               <strong>{principal.name}</strong>
-              <span>Authorized Partnership</span>
+              <span>Manufacturer / Principal</span>
             </div>
 
             <div>
               <strong>{getPrincipalRelationship(principal)}</strong>
-              <span>Relationship</span>
+              <span>PSSPL</span>
             </div>
 
             <div>

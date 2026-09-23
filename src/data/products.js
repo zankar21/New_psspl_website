@@ -77,7 +77,7 @@ export const products = [
     category: "Boiler Pressure Parts",
 
     shortDescription:
-      "Superheater coil and module assemblies for boiler steam circuits.",
+      "Superheater coil and module assemblies designed to convert saturated steam into superheated steam.",
 
     description:
       "Superheater coils convert saturated steam into superheated steam.",

@@ -6,6 +6,14 @@
   background: var(--white);
 }
 
+.section.products-intro-section {
+  padding: 45px 0 30px;
+}
+
+.section.products-page {
+  padding-top: 30px;
+}
+
 .products-intro-content {
   max-width: 800px;
   margin: 0 auto;
@@ -31,14 +39,14 @@
   justify-content: space-between;
   align-items: flex-end;
   gap: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .principal-info-strip {
   background: var(--light-color);
   border-left: 4px solid var(--secondary-color);
   padding: 20px 25px;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 
 .principal-info-strip p {
@@ -164,11 +172,15 @@
 
 .other-solutions-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 25px;
 }
 
 .other-solution-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 30px;
   border: 1px solid var(--border-color);
   transition: 0.3s;
@@ -205,18 +217,41 @@
 }
 
 .solution-applications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-top: 20px;
+  margin-bottom: 20px;
   color: var(--primary-color);
   font-size: 13px;
   font-weight: 600;
 }
 
+.solution-applications span {
+  max-width: 100%;
+  padding: 6px 9px;
+  background: var(--light-color);
+  border: 1px solid var(--border-color);
+  line-height: 1.5;
+}
+
 .solution-enquiry-link {
   display: inline-block;
-  margin-top: 20px;
+  align-self: flex-start;
+  margin-top: auto;
   color: var(--secondary-text-color);
   font-size: 14px;
   font-weight: 700;
+}
+
+.solution-enquiry-link:hover {
+  text-decoration: underline;
+}
+
+.solution-enquiry-link:focus-visible,
+.principal-products-header .text-link:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 4px;
 }
 
 
@@ -241,6 +276,59 @@
   color: #cbd5e1;
   line-height: 1.7;
   margin-bottom: 25px;
+}
+
+.custom-requirement-box .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  max-width: 100%;
+  padding: 14px 28px;
+  border: 1px solid var(--white);
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.custom-requirement-box .btn-primary:hover {
+  background: var(--light-color);
+  border-color: var(--light-color);
+}
+
+.custom-requirement-box .btn-primary:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 4px;
+}
+
+@media (max-width: 1199px) {
+  .other-solutions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .other-solutions-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .other-solution-card,
+  .custom-requirement-box {
+    padding: 25px;
+  }
+
+  .custom-requirement-box .btn-primary {
+    width: 100%;
+  }
+
+  .section.products-intro-section {
+    padding: 35px 0 25px;
+  }
+
+  .section.products-page {
+    padding-top: 25px;
+  }
 }
 
 .product-image--asset {
