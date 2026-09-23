@@ -63,19 +63,12 @@ function About() {
 
       <section className="section about-page">
 
-        <div className="container about-page-grid">
+        <div className="container about-page-intro">
 
-          <div className="about-page-image">
-            <div className="image-placeholder">
-              OUR COMPANY
-            </div>
-          </div>
-
-
-          <div>
+          <div className="about-page-copy">
 
             <SectionTitle
-              subtitle="WHO WE ARE"
+              subtitle="OUR COMPANY"
               title="A Reliable Partner for Industrial Engineering Solutions"
             />
 
@@ -90,11 +83,12 @@ function About() {
 
             <p>
               Headquartered in Chandrapur, PSSPL operates through a
-              team of 35 skilled professionals and a strategic
-              partnership network — including our RIBO Industries
-              distributorship and ties with Babu Enterprises and
-              ASMI Engineering — to support the operational
-              requirements of industrial clients.
+              team of 35 skilled professionals and an industry
+              relationship network — including its Authorised Dealer
+              relationship with RIBO Industries and strategic
+              partnerships with Babu Enterprises and ASMI Engineering
+              — to support the operational requirements of industrial
+              clients.
             </p>
 
             <p>
@@ -221,11 +215,11 @@ function About() {
 
             {directors.map((person) => (
 
-              <div className="leadership-card" key={person.name}>
+              <article className="leadership-card" key={person.name}>
                 <h3>{person.name}</h3>
                 <span className="leadership-role">{person.role}</span>
                 <p>{person.bio}</p>
-              </div>
+              </article>
 
             ))}
 
@@ -251,11 +245,11 @@ function About() {
 
             {team.map((person) => (
 
-              <div className="leadership-card" key={person.name}>
+              <article className="leadership-card" key={person.name}>
                 <h3>{person.name}</h3>
                 <span className="leadership-role">{person.role}</span>
                 <p>{person.bio}</p>
-              </div>
+              </article>
 
             ))}
 

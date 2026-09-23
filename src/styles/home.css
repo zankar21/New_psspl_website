@@ -742,10 +742,30 @@
 }
 
 .cta-section .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
   background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  color: var(--white);
+  font-weight: 600;
   white-space: nowrap;
 }
 
 .cta-section .btn-primary:hover {
   background: #06192b;
+  border-color: #06192b;
+}
+
+.cta-section .btn-primary:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .cta-section .btn-primary {
+    width: min(100%, 320px);
+  }
 }

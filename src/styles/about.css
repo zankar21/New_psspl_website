@@ -2,21 +2,31 @@
    ABOUT PAGE
 ======================================== */
 
-.about-page-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 70px;
-  align-items: center;
+.about-page {
+  background: var(--white);
 }
 
-.about-page-image .image-placeholder {
-  height: 450px;
+.about-page-intro {
+  max-width: 980px;
 }
 
-.about-page-grid p {
+.about-page-copy {
+  max-width: 860px;
+}
+
+.about-page-copy .section-title {
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+
+.about-page-copy p {
   color: var(--gray);
   line-height: 1.8;
   margin-bottom: 18px;
+}
+
+.about-page-copy p:last-child {
+  margin-bottom: 0;
 }
 
 
@@ -137,4 +147,79 @@
   display: block;
   font-size: 14px;
   color: #cbd5e1;
+}
+
+
+/* ========================================
+   LEADERSHIP / TEAM
+======================================== */
+
+.leadership-section-alt {
+  background: var(--light-color);
+}
+
+.leadership-section .section-title {
+  max-width: 680px;
+  margin-bottom: 38px;
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.leadership-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 32px 30px;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-top: 3px solid transparent;
+  box-shadow: none;
+}
+
+.leadership-card:hover {
+  transform: translateY(-3px);
+  border-top-color: var(--secondary-color);
+  box-shadow: 0 10px 24px rgba(11, 45, 77, 0.06);
+}
+
+.leadership-card h3 {
+  color: var(--primary-color);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.leadership-role {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--secondary-text-color);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.45;
+}
+
+.leadership-card p {
+  margin: 0;
+  color: var(--gray);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+@media (max-width: 767px) {
+  .about-page-copy .section-title {
+    margin-bottom: 22px;
+  }
+
+  .leadership-section .section-title {
+    margin-bottom: 30px;
+  }
+
+  .leadership-card {
+    padding: 27px 24px;
+  }
 }

@@ -18,7 +18,7 @@ function AboutPreview() {
         <div className="about-content">
 
           <span className="section-subtitle">
-            ABOUT PAWANSSIDHDHI SUPPLIER PVT LTD
+            ABOUT PAWANSSIDDHI SUPPLIER PVT LTD
           </span>
 
           <h2>
