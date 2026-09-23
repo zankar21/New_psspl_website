@@ -7,17 +7,17 @@ function About() {
     {
       name: "Pawan R. Saraf",
       role: "Director",
-      bio: "Director of PSSPL, also involved in jewellery, real estate and software businesses. Focused on identifying new growth opportunities and guiding the team to deliver results."
+      bio: "Director of PSSPL with business experience spanning jewellery, technology and other ventures. He contributes to the company’s growth strategy, business development and leadership, with a focus on identifying new opportunities and guiding teams toward effective execution."
     },
     {
       name: "Tapasya P. Saraf",
       role: "Director",
-      bio: "Director of PSSPL, sharing equal responsibility across the company's business interests with a target-oriented approach."
+      bio: "Director of PSSPL who shares responsibility for the company’s growth and business development. She contributes a focused, target-oriented approach to organisational priorities and supports the company’s ongoing business initiatives."
     },
     {
       name: "Dr. Ashish Varma",
       role: "Director",
-      bio: "Brings a disciplined, detail-oriented approach to business decision-making."
+      bio: "A medical professional and Director of PSSPL who brings a disciplined, analytical perspective to the company’s decision-making. His detail-oriented approach supports considered business decisions and the company’s broader growth objectives."
     }
   ];
 
@@ -25,27 +25,32 @@ function About() {
     {
       name: "Navalkishor Sharma",
       role: "Senior Project Manager",
-      bio: "35+ years of experience across various departments at CSTPS, with deep expertise in power industry maintenance and project execution."
+      bio: "Senior Project Manager with more than 35 years of experience across various departments at CSTPS. He brings extensive knowledge of power-industry maintenance and project execution, contributing practical operational experience to PSSPL’s industrial projects."
     },
     {
       name: "Dinesh Saraf",
       role: "Business Development Manager",
-      bio: "Brings management experience to guide business growth and communicate PSSPL's vision to staff, investors and customers."
+      bio: "Business Development Manager with prior management experience in the Raisoni Group of Education. He supports PSSPL’s business development and stakeholder communication, helping translate the company’s vision into growth opportunities and customer engagement."
     },
     {
       name: "Sagar Sharma",
       role: "Technical Manager — Mechanical & Civil",
-      bio: "Electrical engineer with 10 years of experience in power plant maintenance, overseeing AMC projects across MAHAGENCO plants."
+      bio: "Electrical Engineer with 10 years of experience in power-plant maintenance. As Technical Manager for Mechanical & Civil projects at PSSPL, he brings hands-on industrial expertise and exposure to AMC projects across MAHAGENCO plants."
     },
     {
       name: "Ravi Sharma",
       role: "Technical Manager — Electrical",
-      bio: "Electrical engineer with experience in power plant electrical maintenance, and an authorized service centre partner for a renowned pumping brand in Chandrapur."
+      bio: "Electrical Engineer with experience in power-plant electrical maintenance. As Technical Manager — Electrical, he contributes technical knowledge and field experience to PSSPL’s electrical project activities."
     },
     {
       name: "Prasad Jorgewar",
       role: "Business Associate",
-      bio: "Commerce graduate handling daily operations for a cement bag manufacturing unit, with a strength in understanding problems and delivering practical solutions."
+      bio: "Commerce graduate with business and operational experience in manufacturing and real estate. As a Business Associate, he brings a practical, problem-solving approach and commercial perspective to PSSPL’s business activities."
+    },
+    {
+      name: "Zankar Sakharkar",
+      role: "Digital Transformation & Technology Manager",
+      bio: "B.E. in Electronics Engineering with experience across industrial operations, project coordination, IT infrastructure, data analytics and digital transformation. He supports PSSPL through technology implementation, vendor and supplier research, digital systems and AI-enabled solutions, with a focus on improving operational efficiency and enabling business growth."
     }
   ];
 
@@ -82,13 +87,13 @@ function About() {
             </p>
 
             <p>
-              Headquartered in Chandrapur, PSSPL operates through a
-              team of 35 skilled professionals and an industry
-              relationship network — including its Authorised Dealer
-              relationship with RIBO Industries and strategic
-              partnerships with Babu Enterprises and ASMI Engineering
-              — to support the operational requirements of industrial
-              clients.
+              Headquartered in Chandrapur, PSSPL’s team of 35+ skilled
+              professionals works with manufacturers and industry
+              partners to support industrial clients’ operational
+              requirements. This includes PSSPL’s role as Authorised
+              Dealer for RIBO Industries in Maharashtra, alongside
+              strategic partnerships with Babu Enterprises and ASMI
+              Engineering.
             </p>
 
             <p>
