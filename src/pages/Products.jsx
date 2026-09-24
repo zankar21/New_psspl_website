@@ -88,8 +88,9 @@ function Products() {
       {/* ================= PAGE HERO ================= */}
 
       <PageHero
-        title="Products & Solutions"
+        title="Products"
         subtitle="INDUSTRIAL SUPPLY & ENGINEERING SOLUTIONS"
+        artworkSrc="/images/products-hero.webp"
       />
 
 

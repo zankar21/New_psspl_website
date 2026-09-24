@@ -61,6 +61,7 @@ function About() {
       <PageHero
         title="About Us"
         subtitle="KNOW MORE ABOUT OUR COMPANY"
+        artworkSrc="/images/about-hero.webp"
       />
 
 

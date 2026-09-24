@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PageHero from "../components/common/PageHero";
 import {
   principals,
   industryRelationships,
@@ -10,17 +11,10 @@ import { products } from "../data/products";
 function Partners() {
   return (
     <>
-      <section className="page-header">
-        <div className="container">
-          <span className="hero-subtitle">OUR NETWORK</span>
-          <h1>Principals & Partners</h1>
-          <p>
-            PSSPL works through a network of principals, industry
-            relationships and strategic partners to deliver industrial
-            products, spare parts and engineering solutions.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Principals & Partners"
+        artworkSrc="/images/partners-hero.webp"
+      />
 
       <section className="section partners-intro-section">
         <div className="container partners-intro-content">

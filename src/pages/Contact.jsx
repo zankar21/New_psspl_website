@@ -113,6 +113,7 @@ function Contact() {
       <PageHero
         title="Contact Us"
         subtitle="GET IN TOUCH WITH US"
+        artworkSrc="/images/contact-hero.webp"
       />
 
 

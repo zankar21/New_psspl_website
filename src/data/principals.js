@@ -31,56 +31,56 @@ export const industryRelationships = [
     role: "Service & Maintenance Products",
     description:
       "Service and maintenance products supporting industrial electrical and mechanical systems.",
-    logo: "/vendor-logos/bharat-bijlee.png"
+    logo: "/vendor-logos/bharat-bijlee.webp"
   },
   {
     name: "Electrotherm India Ltd.",
     role: "Transformer Division",
     description:
       "Transformers and related electrical equipment for industrial and power applications.",
-    logo: "/vendor-logos/electrotherm.png"
+    logo: "/vendor-logos/electrotherm.webp"
   },
   {
     name: "Astral Pipes",
     role: "Industrial Grade Piping",
     description:
       "Industrial-grade piping solutions for process, utility and infrastructure applications.",
-    logo: "/vendor-logos/astral.png"
+    logo: "/vendor-logos/astral.webp"
   },
   {
     name: "Neeco Engineering Servicing Pvt. Ltd.",
     role: "Engineering & Servicing",
     description:
       "Engineering and servicing support for industrial operations and maintenance requirements.",
-    logo: "/vendor-logos/neeco.png"
+    logo: "/vendor-logos/neeco.webp"
   },
   {
     name: "Hydro Care Engineers Pvt. Ltd.",
     role: "Engineering & Servicing",
     description:
       "Specialized engineering and maintenance solutions for industrial applications.",
-    logo: "/vendor-logos/hydrocare.png"
+    logo: "/vendor-logos/hydrocare.webp"
   },
   {
     name: "Paharpur Cooling Towers Ltd.",
     role: "Cooling Tower Systems",
     description:
       "Cooling tower systems and related thermal management equipment for industrial applications.",
-    logo: "/vendor-logos/paharpur.png"
+    logo: "/vendor-logos/paharpur.webp"
   },
   {
     name: "Marsh Automation Pvt. Ltd.",
     role: "Industrial Automation",
     description:
       "Industrial automation solutions including advanced technology-based actuator and automation systems.",
-    logo: "/vendor-logos/marsh.png"
+    logo: "/vendor-logos/marsh.webp"
   },
   {
     name: "Ion Exchange India Ltd.",
     role: "Water & Environmental Solutions",
     description:
       "Water treatment, process water and environmental solutions for industrial applications.",
-    logo: "/vendor-logos/ionexchange.png"
+    logo: "/vendor-logos/ionexchange.webp"
   }
 ];
 
