@@ -206,6 +206,13 @@
 
 }
 
+.form-submit-note {
+  color: var(--gray);
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: -2px;
+}
+
 .form-message a {
   color: inherit;
   font-weight: 700;

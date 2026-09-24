@@ -84,7 +84,24 @@ function Contact() {
     event.preventDefault();
 
     setErrors({});
-    setFormMessage("unavailable");
+    setFormMessage("");
+
+    const subject = formData.subject.trim() || "Industrial Enquiry";
+    const body = [
+      `Name: ${formData.name}`,
+      `Company: ${formData.company || "Not provided"}`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone}`,
+      "",
+      "Requirement:",
+      formData.message
+    ].join("\n");
+
+    const mailtoLink =
+      `mailto:info@pawanssiddhi.in?subject=${encodeURIComponent(subject)}` +
+      `&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoLink;
 
   }
 
@@ -136,7 +153,7 @@ function Contact() {
                   <h4>Our Location</h4>
 
                   <p>
-                    Above Onestep Saloon, Milan Chowk,Chandrapur, Maharashtra, India
+                    Above Onestep Saloon, Milan Chowk, Chandrapur, Maharashtra, India
                   </p>
                 </div>
 
@@ -208,7 +225,7 @@ function Contact() {
             <h2>Send Us an Enquiry</h2>
 
 
-            {formMessage && (
+            {formMessage === "validation" && (
 
               <div
                 className="form-message"
@@ -216,16 +233,7 @@ function Contact() {
                 aria-live="polite"
               >
 
-                {formMessage === "validation" ? (
-                  "Please correct the highlighted fields and try again."
-                ) : (
-                  <>
-                    Online enquiry submission is not available yet. Please{" "}
-                    <a href="tel:+919850333799">call us</a> or{" "}
-                    <a href="mailto:info@pawanssiddhi.in">email us</a> instead.
-                  </>
-                )}
-
+                Please correct the highlighted fields and try again.
               </div>
 
             )}
@@ -388,12 +396,18 @@ function Contact() {
               </div>
 
 
+              <p className="form-submit-note">
+                Your enquiry will open in your email application for you to review
+                and send directly to PSSPL.
+              </p>
+
+
               <button
                 type="submit"
                 className="btn-primary submit-button"
               >
 
-                Submit Enquiry
+                Send Enquiry by Email
 
               </button>
 
