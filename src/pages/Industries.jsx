@@ -1,4 +1,3 @@
-import PageHero from "../components/common/PageHero";
 import SectionTitle from "../components/common/SectionTitle";
 import IndustryCard from "../components/industries/IndustryCard";
 import { industries } from "../data/industries";
@@ -7,23 +6,24 @@ import CTA from "../components/home/CTA";
 function Industries() {
   return (
     <>
-      <PageHero
-        title="Industries We Serve"
-        subtitle="INDUSTRIAL SECTORS"
-      />
+      <section className="industries-hero" aria-label="Industries We Serve">
+        <img
+          src="/images/industries/industries-hero.webp"
+          alt=""
+          className="industries-hero-image"
+          fetchPriority="high"
+        />
+      </section>
 
       <section className="section industries-page">
-
         <div className="container">
-
           <SectionTitle
-            subtitle="OUR INDUSTRY EXPERTISE"
+            subtitle="INDUSTRIES WE SUPPORT"
             title="Supporting Critical Industrial Operations"
-            description="We provide industrial boiler pressure components and engineering solutions for a wide range of energy-intensive industries."
+            description="PSSPL supports industrial clients with products, equipment, spare parts and engineering solutions for maintenance, projects and operational requirements across multiple sectors."
           />
 
           <div className="industries-page-grid">
-
             {industries.map((industry, index) => (
               <IndustryCard
                 key={industry.id}
@@ -31,11 +31,8 @@ function Industries() {
                 index={index}
               />
             ))}
-
           </div>
-
         </div>
-
       </section>
 
       <CTA />
