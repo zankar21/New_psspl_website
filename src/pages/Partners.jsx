@@ -35,7 +35,7 @@ function Partners() {
 
       <section className="section featured-partner-section">
         <div className="container">
-          <span className="section-subtitle">AUTHORIZED PARTNERSHIP</span>
+          <span className="section-subtitle">AUTHORISED PARTNERSHIP</span>
 
           {principals.map((principal) => {
             const principalProducts = principal.productSlugs
@@ -54,12 +54,15 @@ function Partners() {
 
                 <div className="featured-partner-content">
                   <span className="featured-partner-role">
-                    {getPrincipalRelationship(principal)}
+                    Manufacturer / Principal
                   </span>
                   <h2>{principal.name}</h2>
                   <div className="featured-partner-category">
                     {principal.productCategories.join(" & ")}
                   </div>
+                  <span className="featured-partner-role">
+                    PSSPL: {getPrincipalRelationship(principal)}
+                  </span>
                   <p>{principal.description}</p>
 
                   <div className="featured-products-tags">
