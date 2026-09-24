@@ -7,6 +7,7 @@ function Industries() {
   return (
     <>
       <section className="industries-hero" aria-label="Industries We Serve">
+        <h1 className="industries-hero-title">Industries We Serve</h1>
         <img
           src="/images/industries/industries-hero.webp"
           alt=""
