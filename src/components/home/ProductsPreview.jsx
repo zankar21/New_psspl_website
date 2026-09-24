@@ -6,7 +6,7 @@ function ProductsPreview() {
       number: "01",
       title: "Boiler Pressure Parts",
       description:
-        "High-pressure boiler components supplied through our Maharashtra distributorship partnership with RIBO Industries."
+        "High-pressure boiler components from RIBO Industries, supplied by PSSPL as Authorised Dealer for Maharashtra."
     },
 
     {
