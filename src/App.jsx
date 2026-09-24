@@ -7,6 +7,7 @@ import ScrollToTop from "./components/common/ScrollToTop";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Products from "./pages/Products";
+import Services from "./pages/Services";
 import ProductDetails from "./pages/ProductDetails";
 import Industries from "./pages/Industries";
 import IndustryDetails from "./pages/IndustryDetails";
@@ -30,6 +31,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/industries" element={<Industries />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/partners/:slug" element={<PrincipalDetails />} />

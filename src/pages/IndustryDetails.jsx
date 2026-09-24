@@ -37,7 +37,7 @@ function IndustryDetails() {
     <>
       <PageHero
         title={industry.name}
-        subtitle={industry.category}
+        artworkSrc={industry.heroImage}
       />
 
       <section className="section industry-details">

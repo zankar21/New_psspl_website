@@ -26,9 +26,10 @@ function Navbar() {
         <nav
           id="primary-navigation"
           className={isOpen ? "nav-menu active" : "nav-menu"}
+          aria-label="Primary navigation"
         >
 
-          <NavLink to="/" onClick={closeMenu}>
+          <NavLink to="/" end onClick={closeMenu}>
             Home
           </NavLink>
 
@@ -38,6 +39,10 @@ function Navbar() {
 
           <NavLink to="/products" onClick={closeMenu}>
             Products
+          </NavLink>
+
+          <NavLink to="/services" onClick={closeMenu}>
+            Services
           </NavLink>
 
           <NavLink to="/industries" onClick={closeMenu}>
@@ -62,11 +67,11 @@ function Navbar() {
         <button
           className="menu-toggle"
           onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle Navigation"
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={isOpen}
           aria-controls="primary-navigation"
         >
-          {isOpen ? <FaTimes /> : <FaBars />}
+          {isOpen ? <FaTimes aria-hidden="true" /> : <FaBars aria-hidden="true" />}
         </button>
 
       </div>

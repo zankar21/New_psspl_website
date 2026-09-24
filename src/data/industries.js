@@ -4,6 +4,7 @@ export const industries = [
     slug: "power-plants",
     name: "Power Generation",
     category: "POWER GENERATION",
+    heroImage: "/images/industries/power-generation-hero.webp",
     shortDescription:
       "Industrial products, boiler pressure components and engineering support for thermal power generation facilities.",
     description:
@@ -59,6 +60,7 @@ export const industries = [
     slug: "steel-industry",
     name: "Steel Industry",
     category: "STEEL & METALLURGY",
+    heroImage: "/images/industries/steel-industry-hero.webp",
     shortDescription:
       "Industrial products and boiler pressure components supporting steel plants, captive power and process operations.",
     description:
@@ -104,6 +106,7 @@ export const industries = [
     slug: "cement-industry",
     name: "Cement Industry",
     category: "CEMENT & PROCESS INDUSTRY",
+    heroImage: "/images/industries/cement-industry-hero.webp",
     shortDescription:
       "Industrial products and engineering support for cement plants, process operations and power-generation systems.",
     description:
@@ -145,6 +148,7 @@ export const industries = [
     slug: "mining",
     name: "Mining",
     category: "MINING & MINERAL OPERATIONS",
+    heroImage: "/images/industries/mining-hero.webp",
     shortDescription:
       "Industrial equipment, spare parts and maintenance supplies supporting mining and allied processing operations.",
     description:
@@ -181,6 +185,7 @@ export const industries = [
     slug: "sugar-cogeneration",
     name: "Sugar & Cogeneration",
     category: "SUGAR & COGENERATION",
+    heroImage: "/images/industries/sugar-cogeneration-hero.webp",
     shortDescription:
       "Boiler pressure components for bagasse-based boilers, steam systems and cogeneration applications.",
     description:
@@ -216,6 +221,7 @@ export const industries = [
     slug: "chemical-industries",
     name: "Chemical & Process Industries",
     category: "PROCESS INDUSTRY",
+    heroImage: "/images/industries/chemical-process-industries-hero.webp",
     shortDescription:
       "Industrial products and boiler components supporting process steam, utilities and plant operations.",
     description:
@@ -251,6 +257,7 @@ export const industries = [
     slug: "paper-industries",
     name: "Pulp & Paper",
     category: "PULP & PAPER",
+    heroImage: "/images/industries/pulp-paper-hero.webp",
     shortDescription:
       "Industrial products and boiler components supporting steam, utilities and continuous process operations.",
     description:

@@ -19,13 +19,17 @@ function Footer() {
           <div className="footer-company">
 
             <Link to="/" className="footer-logo">
-              PAWANSSIDDHI <span>SUPPLIER PVT LTD</span>
+              <span className="footer-brand-name">PAWANSSIDDHI</span>
+              <span className="footer-brand-subtitle">SUPPLIER PVT LTD</span>
             </Link>
 
             <p>
-              Delivering reliable industrial engineering solutions
-              and high-quality boiler pressure products for
-              critical industrial applications.
+              Industrial products, equipment, spare parts and engineering
+              solutions for critical industrial requirements.
+            </p>
+
+            <p className="footer-principal-relationship">
+              Authorised Dealer for <Link to="/partners/ribo-industries">RIBO Industries</Link> in Maharashtra
             </p>
 
           </div>
@@ -33,7 +37,7 @@ function Footer() {
 
           {/* QUICK LINKS */}
 
-          <div className="footer-column">
+          <nav className="footer-column" aria-label="Footer quick links">
 
             <h3>Quick Links</h3>
 
@@ -52,7 +56,15 @@ function Footer() {
               </li>
 
               <li>
+                <Link to="/services">Services</Link>
+              </li>
+
+              <li>
                 <Link to="/industries">Industries</Link>
+              </li>
+
+              <li>
+                <Link to="/partners">Partners</Link>
               </li>
 
               <li>
@@ -61,12 +73,12 @@ function Footer() {
 
             </ul>
 
-          </div>
+          </nav>
 
 
           {/* PRODUCTS */}
 
-          <div className="footer-column">
+          <nav className="footer-column" aria-label="Footer product links">
 
             <h3>Our Products</h3>
 
@@ -90,7 +102,11 @@ function Footer() {
 
             </ul>
 
-          </div>
+            <Link to="/products" className="footer-view-all">
+              View All Products <span aria-hidden="true">→</span>
+            </Link>
+
+          </nav>
 
 
           {/* CONTACT */}
@@ -102,7 +118,7 @@ function Footer() {
             <div className="contact-info">
 
               <div>
-                <FaMapMarkerAlt />
+                <FaMapMarkerAlt aria-hidden="true" />
 
                 <span>
                   Above OneStep Saloon, Milan Chowk, Chandrapur, Maharashtra, India
@@ -111,7 +127,7 @@ function Footer() {
 
 
               <div>
-                <FaPhoneAlt />
+                <FaPhoneAlt aria-hidden="true" />
 
                 <a href="tel:+919850333799">
                   +91 9850333799
@@ -120,7 +136,7 @@ function Footer() {
 
 
               <div>
-                <FaEnvelope />
+                <FaEnvelope aria-hidden="true" />
 
                 <a href="mailto:info@pawanssiddhi.in">
                   info@pawanssiddhi.in
