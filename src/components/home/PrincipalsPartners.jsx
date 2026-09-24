@@ -13,11 +13,11 @@ function PrincipalsPartners() {
       <div className="container">
         <div className="principals-header">
           <span className="section-subtitle">OUR PRINCIPALS</span>
-          <h2>Authorised Partnerships</h2>
+          <h2>Manufacturer Partnerships</h2>
           <p>
-            PSSPL collaborates with established manufacturers and industry
-            partners to deliver reliable products and engineering solutions for
-            critical industrial applications.
+            PSSPL works with established manufacturers to expand the range of
+            industrial products and solutions available to customers across
+            Maharashtra.
           </p>
         </div>
 
@@ -30,16 +30,19 @@ function PrincipalsPartners() {
             return (
               <article className="authorized-principal-card" key={principal.slug}>
                 <div className="authorized-principal-logo">
-                  <img src={principal.logo} alt={`${principal.name} logo`} />
+                  <img src={principal.logo} alt={principal.name} />
                 </div>
 
                 <div className="authorized-principal-content">
-                  <span className="partner-badge">
-                    {getPrincipalRelationship(principal)}
-                  </span>
-
+                  <span className="principal-category">MANUFACTURER / PRINCIPAL</span>
                   <h3>{principal.name}</h3>
-                  <p>{principal.description}</p>
+                  <p className="principal-relationship">
+                    PSSPL: {getPrincipalRelationship(principal)}
+                  </p>
+                  <p>
+                    Boiler pressure components for power generation and
+                    process-industry applications.
+                  </p>
 
                   <div className="principal-product-tags" aria-label="Representative products">
                     {principalProducts.map((product) => (
@@ -48,7 +51,7 @@ function PrincipalsPartners() {
                   </div>
 
                   <Link to={principal.detailRoute} className="btn-primary">
-                    Explore {principal.name} Products
+                    Explore RIBO Products
                   </Link>
                 </div>
               </article>
@@ -57,17 +60,19 @@ function PrincipalsPartners() {
         </div>
 
         <div className="industry-relationships">
-          <h3>Industry Relationships</h3>
+          <h3>Industry Partners &amp; Suppliers</h3>
 
-          <div className="partners-scroll">
+          <div className="partners-grid">
             {industryRelationships.map((relationship) => (
               <article className="partner-card" key={relationship.name}>
                 {relationship.logo && (
-                  <img
-                    src={relationship.logo}
-                    alt={relationship.name}
-                    className="partner-logo"
-                  />
+                  <div className="partner-logo-area">
+                    <img
+                      src={relationship.logo}
+                      alt={relationship.name}
+                      className="partner-logo"
+                    />
+                  </div>
                 )}
 
                 <h4>{relationship.name}</h4>
@@ -82,10 +87,10 @@ function PrincipalsPartners() {
 
           <div className="strategic-partners-list">
             {strategicPartners.map((partner) => (
-              <div key={partner.name}>
-                <strong>{partner.name}</strong>
-                <span>{partner.role}</span>
-              </div>
+              <article key={partner.name}>
+                <h4>{partner.name}</h4>
+                <p>{partner.role}</p>
+              </article>
             ))}
           </div>
         </div>

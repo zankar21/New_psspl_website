@@ -12,7 +12,7 @@ function IndustriesServed() {
     },
 
     {
-      title: "Cement",
+      title: "Cement Industry",
       companies: [
         "ACC Cement",
         "Dalmia Bharat Cement"
@@ -20,7 +20,7 @@ function IndustriesServed() {
     },
 
     {
-      title: "Steel & Metallurgy",
+      title: "Steel Industry",
       companies: [
         "Lloyds Steel",
         "SAIL"
@@ -45,7 +45,7 @@ function IndustriesServed() {
         <div className="industries-served-header">
 
           <span className="section-subtitle">
-            INDUSTRIES WE SERVED
+            OUR INDUSTRIAL EXPERIENCE
           </span>
 
           <h2>
@@ -53,8 +53,8 @@ function IndustriesServed() {
           </h2>
 
           <p>
-            Our experience and industry network extend across
-            power generation, cement, steel and mining sectors.
+            PSSPL has supported requirements across power generation, cement,
+            steel and mining organizations.
           </p>
 
         </div>

@@ -7,10 +7,10 @@ function AboutPreview() {
       <div className="container about-grid">
 
         <div className="about-image">
-
-          <div className="about-image-placeholder">
-            PSSPL INDUSTRIAL OPERATIONS
-          </div>
+          <img
+            src="/images/home-about-industrial-operations.webp"
+            alt="PSSPL industrial engineering and project support"
+          />
 
         </div>
 
@@ -22,50 +22,51 @@ function AboutPreview() {
           </span>
 
           <h2>
-            Your Reliable Partner for Industrial Supply & Solutions
+            Industrial Supply, Engineering & Project Support
           </h2>
 
           <p>
-            Pawanssiddhi Supplier Pvt Ltd (PSSPL) is an
-            industrial supply and engineering solutions company
-            supporting power, steel, cement, mining and other
-            critical industrial sectors.
+            Pawanssiddhi Supplier Pvt Ltd (PSSPL) supports industrial customers
+            with products, spare parts, equipment and engineering solutions for
+            operational, maintenance and project requirements.
           </p>
 
           <p>
-            Through our strategic partnerships and industry
-            network, we provide industrial products, spare parts,
-            equipment and engineering support for projects,
-            maintenance and operational requirements.
+            Through manufacturer relationships, strategic partnerships and site
+            execution capabilities, we support critical industries including
+            power, steel, cement and mining.
           </p>
 
 
           <div className="about-highlights">
 
             <div>
-              <strong>Industrial</strong>
-              <span>Products & Spares</span>
+              <strong>Industrial Products</strong>
+              <span>Equipment, Components &amp; Spares</span>
             </div>
 
             <div>
-              <strong>Engineering</strong>
-              <span>Solutions & Projects</span>
+              <strong>Industrial Services</strong>
+              <span>Fabrication, Erection, Inspection &amp; Site Support</span>
             </div>
 
             <div>
-              <strong>Strategic</strong>
-              <span>Industry Partnerships</span>
+              <strong>Industry Network</strong>
+              <span>Manufacturers &amp; Strategic Partners</span>
             </div>
 
           </div>
 
 
-          <Link
-            to="/about"
-            className="btn-primary"
-          >
-            Learn More About PSSPL
-          </Link>
+          <div className="about-actions">
+            <Link to="/about" className="btn-primary">
+              About PSSPL
+            </Link>
+
+            <Link to="/services" className="btn-outline">
+              Explore Services
+            </Link>
+          </div>
 
         </div>
 

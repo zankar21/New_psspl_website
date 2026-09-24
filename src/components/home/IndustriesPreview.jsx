@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import SectionTitle from "../common/SectionTitle";
 import { industries } from "../../data/industries";
 
@@ -6,14 +7,19 @@ function IndustriesPreview() {
     <section className="industries-preview section">
 
       <div className="container">
+        <div className="industries-preview-header">
+          <SectionTitle
+            subtitle="INDUSTRIES WE SERVE"
+            title="Supporting Critical Industrial Operations"
+            description="PSSPL supports industrial customers with products, equipment, engineering solutions and site services across critical sectors."
+          />
 
-        <SectionTitle
-          subtitle="INDUSTRIES WE SERVE"
-          title="Supporting Critical Industrial Infrastructure"
-          description="Our products serve industries where reliability and performance are essential."
-        />
+          <Link to="/industries" className="text-link">
+            Explore All Industries <span aria-hidden="true">→</span>
+          </Link>
+        </div>
 
-        <div className="industries-scroll">
+        <div className="industries-grid">
 
           {industries.map((industry) => (
 
@@ -29,8 +35,15 @@ function IndustriesPreview() {
               <h3>{industry.name}</h3>
 
               <p>
-                {industry.description}
+                {industry.shortDescription}
               </p>
+
+              <Link
+                to={`/industries/${industry.slug}`}
+                className="industry-link"
+              >
+                Explore Industry <span aria-hidden="true">→</span>
+              </Link>
 
             </div>
 

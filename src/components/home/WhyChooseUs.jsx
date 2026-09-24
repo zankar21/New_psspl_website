@@ -7,28 +7,28 @@ function WhyChooseUs() {
       number: "01",
       title: "Quality Focus",
       description:
-        "We focus on reliable and high-quality industrial products."
+        "Reliable products and solutions aligned with industrial requirements."
     },
 
     {
       number: "02",
       title: "Technical Understanding",
       description:
-        "Strong understanding of industrial applications and requirements."
+        "Practical understanding of industrial applications, maintenance and project requirements."
     },
 
     {
       number: "03",
-      title: "Reliable Supply",
+      title: "Supply & Execution Coordination",
       description:
-        "Efficient supply coordination and dependable delivery."
+        "Coordinated support across products, suppliers, site activities and project requirements."
     },
 
     {
       number: "04",
-      title: "Customer Support",
+      title: "Responsive Support",
       description:
-        "Dedicated support throughout the product supply process."
+        "Clear coordination from requirement understanding through supply or site support."
     }
   ];
 
@@ -44,7 +44,7 @@ function WhyChooseUs() {
             <SectionTitle
               subtitle="WHY CHOOSE US"
               title="Committed to Reliability and Performance"
-              description="We understand the critical importance of industrial equipment reliability."
+              description="We understand the importance of reliable products, technical coordination and responsive support for critical industrial requirements."
             />
 
           </div>

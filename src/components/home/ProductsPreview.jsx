@@ -6,28 +6,45 @@ function ProductsPreview() {
       number: "01",
       title: "Boiler Pressure Parts",
       description:
-        "High-pressure boiler components from RIBO Industries, supplied by PSSPL as Authorised Dealer for Maharashtra."
+        "Boiler pressure components from RIBO Industries, supplied by PSSPL as Authorised Dealer for Maharashtra.",
+      image: "/images/ribo/products/ribo-water-wall-panel.webp",
+      alt: "RIBO boiler pressure component",
+      to: "/products",
+      action: "Explore Products →",
+      imageMode: "contain"
     },
 
     {
       number: "02",
       title: "Industrial Spare Parts",
       description:
-        "Reliable mechanical, electrical and maintenance spares for critical industrial operations."
+        "Mechanical, electrical and maintenance spares supporting critical industrial operations.",
+      image: "/images/home/industrial-spare-parts.webp",
+      alt: "Industrial spare parts",
+      to: "/products",
+      action: "Explore Products →"
     },
 
     {
       number: "03",
       title: "Industrial Equipment",
       description:
-        "Industrial products and equipment sourced through our trusted manufacturing and supplier network."
+        "Industrial equipment sourced through established manufacturer and supplier relationships.",
+      image: "/images/home/industrial-equipment.webp",
+      alt: "Industrial equipment",
+      to: "/products",
+      action: "Explore Products →"
     },
 
     {
       number: "04",
       title: "Engineering & Project Solutions",
       description:
-        "Support for industrial projects, procurement, maintenance and specialized engineering requirements."
+        "Support for industrial projects, procurement, maintenance and engineering requirements.",
+      image: "/images/home/engineering-project-solutions.webp",
+      alt: "Industrial engineering and project support",
+      to: "/services",
+      action: "Explore Services →"
     }
   ];
 
@@ -46,7 +63,7 @@ function ProductsPreview() {
             </span>
 
             <h2>
-              Comprehensive Industrial Supply Solutions
+              Industrial Products, Equipment &amp; Project Solutions
             </h2>
 
           </div>
@@ -55,7 +72,7 @@ function ProductsPreview() {
             to="/products"
             className="text-link"
           >
-            View All Solutions →
+            Explore Products →
           </Link>
 
         </div>
@@ -65,10 +82,18 @@ function ProductsPreview() {
 
           {solutions.map((solution) => (
 
-            <div
+            <article
               className="solution-card"
               key={solution.number}
             >
+
+              <div
+                className={`solution-image${solution.imageMode ? ` solution-image--${solution.imageMode}` : ""}`}
+              >
+                <img src={solution.image} alt={solution.alt} />
+              </div>
+
+              <div className="solution-card-content">
 
               <span className="solution-number">
                 {solution.number}
@@ -79,13 +104,15 @@ function ProductsPreview() {
               <p>{solution.description}</p>
 
               <Link
-                to="/products"
+                to={solution.to}
                 className="solution-link"
               >
-                Explore Solution →
+                {solution.action}
               </Link>
 
-            </div>
+              </div>
+
+            </article>
 
           ))}
 

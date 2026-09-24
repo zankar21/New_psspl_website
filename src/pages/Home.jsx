@@ -2,6 +2,7 @@ import Hero from "../components/home/Hero";
 import TrustedBy from "../components/home/TrustedBy";
 import AboutPreview from "../components/home/AboutPreview";
 import ProductsPreview from "../components/home/ProductsPreview";
+import ServicesPreview from "../components/home/ServicesPreview";
 import PrincipalsPartners from "../components/home/PrincipalsPartners";
 import IndustriesPreview from "../components/home/IndustriesPreview";
 import WhyChooseUs from "../components/home/WhyChooseUs";
@@ -20,6 +21,8 @@ function Home() {
       <AboutPreview />
 
       <ProductsPreview />
+
+      <ServicesPreview />
 
       <PrincipalsPartners />
 
