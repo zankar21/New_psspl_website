@@ -35,7 +35,7 @@ function About() {
     {
       name: "Sagar Sharma",
       role: "Technical Manager — Mechanical & Civil",
-      bio: "Electrical Engineer with 10 years of experience in power-plant maintenance. As Technical Manager for Mechanical & Civil projects at PSSPL, he brings hands-on industrial expertise and exposure to AMC projects across MAHAGENCO plants."
+      bio: "Electrical Engineer with 10 years of professional experience in power-plant maintenance, including exposure to AMC projects across MAHAGENCO plants. As Technical Manager — Mechanical & Civil at PSSPL, he contributes this field experience to the company's industrial project activities."
     },
     {
       name: "Ravi Sharma",
