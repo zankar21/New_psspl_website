@@ -172,6 +172,10 @@ function Contact() {
             </p>
 
 
+            <div className="contact-phone-actions" aria-label="Direct contact options">
+              <a href="tel:+919850333799"><FaPhoneAlt aria-hidden="true" /> Call PSSPL</a>
+              <a href="mailto:pawanssiddhi@gmail.com"><FaEnvelope aria-hidden="true" /> Email Us</a>
+            </div>
             <div className="contact-details">
 
 

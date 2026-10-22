@@ -23,7 +23,7 @@ function Home() {
         <div className="container profile-hero-content">
           <p className="profile-eyebrow">PAWANSSIDDHI SUPPLIER PVT LTD</p>
           <h1 id="home-heading">From industrial needs.<br /><span>To real-world solutions.</span></h1>
-          <p className="profile-hero-description">Industrial equipment, spare parts, procurement and customer-specific project support. Based in Chandrapur, serving industrial requirements across Maharashtra.</p>
+          <p className="profile-hero-description">Industrial equipment, spare parts, procurement and project support. Based in Chandrapur, serving Maharashtra.</p>
           <div className="profile-actions">
             <Link className="profile-button profile-button-primary" to="/products">Explore Products <FaArrowRight aria-hidden="true" /></Link>
             <a className="profile-button profile-button-light" href="/documents/PSSPL_Brochure.pdf" download>Download Brochure <FaDownload aria-hidden="true" /></a>

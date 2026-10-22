@@ -225,7 +225,8 @@ function About() {
               <article className="leadership-card" key={person.name}>
                 <h3>{person.name}</h3>
                 <span className="leadership-role">{person.role}</span>
-                <p>{person.bio}</p>
+                <p className="leadership-bio-wide">{person.bio}</p>
+                <details className="leadership-bio-mobile"><summary aria-label={`Read profile of ${person.name}`}>Read Profile</summary><p>{person.bio}</p></details>
               </article>
 
             ))}
@@ -255,7 +256,8 @@ function About() {
               <article className="leadership-card" key={person.name}>
                 <h3>{person.name}</h3>
                 <span className="leadership-role">{person.role}</span>
-                <p>{person.bio}</p>
+                <p className="leadership-bio-wide">{person.bio}</p>
+                <details className="leadership-bio-mobile"><summary aria-label={`Read profile of ${person.name}`}>Read Profile</summary><p>{person.bio}</p></details>
               </article>
 
             ))}

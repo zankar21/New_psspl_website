@@ -1,16 +1,37 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const headerRef = useRef(null);
+  const toggleRef = useRef(null);
+  useEffect(() => {
+    if (!isOpen) return;
+    const onOutside = event => {
+      if (!headerRef.current?.contains(event.target)) setIsOpen(false);
+    };
+    const onKey = event => {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+        toggleRef.current?.focus();
+      }
+    };
+    document.addEventListener("pointerdown", onOutside);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("pointerdown", onOutside);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [isOpen]);
+
 
   const closeMenu = () => {
     setIsOpen(false);
   };
 
   return (
-    <header className="navbar">
+    <header className="navbar" ref={headerRef}>
       <div className="container navbar-container">
 
         {/* Logo */}
@@ -27,6 +48,18 @@ function Navbar() {
             height="724"
           />
         </Link>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="menu-toggle"
+          ref={toggleRef}
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isOpen}
+          aria-controls="primary-navigation"
+        >
+          {isOpen ? <FaTimes aria-hidden="true" /> : <FaBars aria-hidden="true" />}
+        </button>
 
         {/* Navigation */}
         <nav
@@ -69,16 +102,7 @@ function Navbar() {
 
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="menu-toggle"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-          aria-expanded={isOpen}
-          aria-controls="primary-navigation"
-        >
-          {isOpen ? <FaTimes aria-hidden="true" /> : <FaBars aria-hidden="true" />}
-        </button>
+
 
       </div>
     </header>
