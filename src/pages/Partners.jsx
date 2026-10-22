@@ -22,7 +22,7 @@ function Partners() {
           <h2>Building Broader Industrial Capabilities Through Partnerships</h2>
           <p>
             Our network supports diverse industrial requirements across power
-            generation, steel, cement, mining and other industrial sectors.
+            generation, steel and cement, with opportunities in additional sectors.
           </p>
         </div>
       </section>
@@ -79,10 +79,10 @@ function Partners() {
         <div className="container">
           <div className="section-heading-center">
             <span className="section-subtitle">INDUSTRY RELATIONSHIPS</span>
-            <h2>Industry Relationships</h2>
+            <h2>Manufacturer &amp; Supplier Network</h2>
             <p>
-              These relationships broaden the industrial products, equipment
-              and support available through PSSPL.
+              Manufacturer and supplier relationships support customer-specific sourcing.
+              Relationships are subject to confirmation; no authorised dealership status is implied.
             </p>
           </div>
 

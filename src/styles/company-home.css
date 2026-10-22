@@ -1,0 +1,117 @@
+/* Company profile: a concise capability-led homepage. */
+.company-home { --profile-navy: #0b2d4d; --profile-orange: #e67e22; }
+.company-home h2 { font-size: clamp(28px, 3vw, 40px); line-height: 1.25; color: var(--profile-navy); letter-spacing: -0.035em; }
+.company-home h3 { font-size: 21px; line-height: 1.35; color: var(--profile-navy); }
+.company-home p { line-height: 1.75; }
+.company-home .profile-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.7px; color: #a94f08; margin-bottom: 14px; line-height: 1.6; }
+.company-home .profile-hero { background: linear-gradient(90deg, rgba(5,23,41,.95), rgba(5,23,41,.77) 52%, rgba(5,23,41,.2)), url('/images/pawanssiddhi-hero.webp') center / cover; color: white; padding: 90px 0 76px; }
+.company-home .profile-hero-content { max-width: 1200px; }
+.company-home .profile-hero .profile-eyebrow { color: #ffb468; }
+.company-home .profile-hero h1 { max-width: 820px; font-size: clamp(36px, 4.4vw, 62px); line-height: 1.12; letter-spacing: -0.045em; margin-bottom: 24px; }
+.company-home .profile-hero h1 span { color: #ffab55; }
+.company-home .profile-hero-description { max-width: 610px; font-size: 17px; color: #e1e9f1; margin-bottom: 30px; }
+.company-home .profile-hero-footnote { font-size: 12px; color: #c3d0dc; margin-top: 30px; }
+.company-home .profile-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.company-home .profile-button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 14px 22px; border-radius: 4px; font-size: 14px; font-weight: 700; border: 1px solid transparent; transition: background .2s, color .2s; }
+.company-home .profile-button-primary { background: #c65b08; color: white; }
+.company-home .profile-button-primary:hover { background: #a44806; }
+.company-home .profile-button-light { color: white; border-color: #a8b8c8; background: rgba(8,31,53,.35); }
+.company-home .profile-button-light:hover { background: white; color: var(--profile-navy); }
+.company-home .profile-button-outline { color: var(--profile-navy); border-color: #a6b8c8; }
+.company-home .profile-button-outline:hover { background: white; }
+.company-home a:focus-visible { outline: 3px solid #e67e22; outline-offset: 5px; }
+.company-home .profile-facts { background: #f1f5f9; border-bottom: 1px solid #e1e7ee; }
+.company-home .profile-facts-grid { display: grid; grid-template-columns: .65fr 1.35fr .85fr 1.15fr; padding-block: 26px; }
+.company-home .profile-facts-grid div { padding-inline: 25px; border-right: 1px solid #d6e0e9; }
+.company-home .profile-facts-grid div:first-child { padding-left: 0; }
+.company-home .profile-facts-grid div:last-child { border-right: 0; }
+.company-home .profile-facts dt { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #53677a; margin-bottom: 7px; }
+.company-home .profile-facts dd { font-size: 16px; font-weight: 700; color: var(--profile-navy); line-height: 1.5; }
+.company-home .profile-section { padding: 68px 0; }
+.company-home .profile-section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 36px; margin-bottom: 30px; }
+.company-home .profile-section-heading > p { max-width: 420px; color: #536477; font-size: 15px; }
+.company-home .profile-vertical-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; }
+.company-home .profile-vertical-card { border: 1px solid #e0e7ef; background: white; overflow: hidden; }
+.company-home .profile-vertical-card > img { width: 100%; height: 210px; object-fit: cover; }
+.company-home .profile-vertical-copy { padding: 28px; }
+.company-home .profile-card-label { font-size: 10px; font-weight: 700; color: #a94f08; letter-spacing: 1.3px; text-transform: uppercase; }
+.company-home .profile-vertical-copy h3 { margin: 12px 0; }
+.company-home .profile-vertical-copy p { color: #536477; font-size: 15px; margin-bottom: 20px; }
+.company-home .profile-vertical-copy a, .company-home .profile-text-link { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-size: 14px; font-weight: 700; color: var(--profile-navy); }
+.company-home .profile-text-link:hover, .company-home .profile-vertical-copy a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.company-home .profile-note { margin-top: 18px; font-size: 12px; color: #657487; line-height: 1.7; }
+.company-home .profile-section-tint { background: #f5f7fa; }
+.company-home .profile-category-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
+.company-home .profile-category-card { background: white; border: 1px solid #e0e7ef; padding: 24px; display: flex; flex-direction: column; transition: border-color .2s; }
+.company-home .profile-category-card:hover { border-color: #b65b14; }
+.company-home .profile-category-card > svg { color: #b2540c; font-size: 26px; margin-bottom: 18px; }
+.company-home .profile-category-card h3 { font-size: 18px; margin-bottom: 10px; }
+.company-home .profile-category-card p { font-size: 13px; color: #536477; margin-bottom: 18px; }
+.company-home .profile-category-card > span { display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 700; color: var(--profile-navy); margin-top: auto; }
+.company-home .profile-ribo { display: grid; grid-template-columns: .65fr 1.35fr; align-items: center; gap: 52px; }
+.company-home .profile-ribo-logo { background: #f5f7fa; padding: 40px; min-height: 240px; display: grid; place-items: center; border-left: 3px solid var(--profile-orange); }
+.company-home .profile-ribo-logo img { width: 230px; height: auto; }
+.company-home .profile-ribo h2 { margin-bottom: 14px; }
+.company-home .profile-ribo p:not(.profile-eyebrow) { color: #536477; font-size: 15px; }
+.company-home .profile-product-list { display: flex; gap: 8px; flex-wrap: wrap; margin: 20px 0 10px; }
+.company-home .profile-product-list li { background: #f1f5f9; padding: 7px 10px; font-size: 12px; color: var(--profile-navy); }
+.company-home .profile-section-navy { background: #0b2d4d; color: #d6e2ee; }
+.company-home .profile-section-navy h2, .company-home .profile-section-navy h3, .company-home .profile-section-navy a { color: white; }
+.company-home .profile-section-navy .profile-eyebrow, .company-home .profile-section-navy .profile-card-label { color: #ffb468; }
+.company-home .profile-section-navy .profile-section-heading > p { color: #c4d4e4; }
+.company-home .profile-sector-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
+.company-home .profile-sector-grid article { padding: 26px; border: 1px solid #37546d; }
+.company-home .profile-sector-grid h3 { margin: 10px 0 14px; }
+.company-home .profile-sector-grid article > p:not(.profile-card-label) { font-size: 14px; margin-bottom: 18px; }
+.company-home .profile-sector-grid a { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700; min-height: 44px; }
+.company-home .profile-reference-note { display: flex; justify-content: space-between; gap: 16px; margin: 22px 0 8px; font-size: 12px; color: #c4d4e4; }
+.company-home .profile-process { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); list-style: none; gap: 24px; }
+.company-home .profile-process li { border-top: 2px solid #dce5ed; padding-top: 20px; }
+.company-home .profile-process li > span { color: #a94f08; font-size: 12px; font-weight: 700; }
+.company-home .profile-process h3 { margin: 10px 0; font-size: 19px; }
+.company-home .profile-process p { font-size: 14px; color: #536477; }
+.company-home .profile-network { margin-top: 40px; padding: 28px; background: #f5f7fa; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.company-home .profile-network > div { max-width: 720px; }
+.company-home .profile-network h3 { margin-bottom: 12px; }
+.company-home .profile-network p:not(.profile-eyebrow) { font-size: 14px; color: #536477; }
+.company-home .profile-network .profile-note { font-size: 12px; margin-top: 10px; }
+.company-home .profile-network > a { flex-shrink: 0; }
+.company-home .profile-closing { background: #eef3f8; border-top: 1px solid #dce5ed; }
+.company-home .profile-closing-grid { display: flex; justify-content: space-between; align-items: center; gap: 36px; }
+.company-home .profile-closing p:not(.profile-eyebrow) { font-size: 15px; color: #536477; margin-top: 16px; max-width: 560px; }
+.company-home .profile-closing .profile-actions { flex-direction: column; flex-shrink: 0; }
+#mechanical-equipment, #electrical-equipment, #boiler-thermal-components, #piping-flow-control, #maintenance-spares, #industrial-consumables { scroll-margin-top: 100px; }
+@media (max-width: 1000px) {
+  .company-home .profile-category-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .company-home .profile-section-heading { align-items: flex-start; }
+  .company-home .profile-facts-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+  .company-home .profile-facts-grid div { padding: 0; border: 0; }
+  .company-home .profile-network { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 700px) {
+  .company-home .profile-hero { padding: 48px 0; background-image: linear-gradient(rgba(5,23,41,.82), rgba(5,23,41,.72)), url('/images/pawanssiddhi-hero.webp'); background-position: 56% center; }
+  .company-home .profile-hero h1 { font-size: clamp(34px,8vw,46px); }
+  .company-home .profile-hero-description { font-size: 16px; }
+  .company-home .profile-section { padding: 44px 0; }
+  .company-home .profile-section-heading { flex-direction: column; gap: 16px; margin-bottom: 24px; }
+  .company-home .profile-vertical-grid, .company-home .profile-sector-grid, .company-home .profile-ribo { grid-template-columns: minmax(0,1fr); }
+  .company-home .profile-vertical-copy { padding: 24px; }
+  .company-home .profile-vertical-card > img { height: 180px; }
+  .company-home .profile-ribo { gap: 26px; }
+  .company-home .profile-ribo-logo { min-height: 160px; padding: 24px; }
+  .company-home .profile-ribo-logo img { width: 180px; }
+  .company-home .profile-reference-note, .company-home .profile-closing-grid { flex-direction: column; align-items: flex-start; }
+  .company-home .profile-process { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .company-home .profile-network { padding: 24px; }
+  .company-home .profile-closing .profile-actions { width: 100%; }
+}
+@media (max-width: 480px) {
+  .company-home .profile-category-grid { grid-template-columns: minmax(0,1fr); gap: 12px; }
+  .company-home .profile-category-card { padding: 22px; }
+  .company-home .profile-actions { flex-direction: column; }
+  .company-home .profile-button { width: 100%; padding-inline: 16px; }
+  .company-home .profile-facts dd { font-size: 14px; }
+  .company-home .profile-facts-grid { gap: 22px 16px; }
+  .company-home .profile-process { gap: 24px 18px; }
+  .company-home .profile-process p { font-size: 13px; }
+}

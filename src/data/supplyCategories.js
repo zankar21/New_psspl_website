@@ -1,0 +1,8 @@
+export const supplyCategories = [
+  { id: 'mechanical-equipment', title: 'Mechanical Equipment', description: 'Equipment for industrial operations and utilities.', items: ['Industrial Pumps', 'Motors & Gearboxes', 'Couplings', 'Compressors', 'Fans & Blowers', 'Cooling Equipment'] },
+  { id: 'electrical-equipment', title: 'Electrical Equipment', description: 'Power distribution and industrial control equipment.', items: ['Transformers', 'LT/HT Switchgear', 'MCC & Control Panels', 'Cables & Accessories', 'Drives & Starters', 'Lighting & Control Components'] },
+  { id: 'boiler-thermal-components', title: 'Boiler & Thermal Components', description: 'Components for thermal and pressure applications.', items: ['Boiler Tubes', 'Boiler Pressure Parts', 'Economiser & Superheater Coils', 'Headers & Manifolds', 'Heat Exchangers', 'Refractory & Insulation'] },
+  { id: 'piping-flow-control', title: 'Piping & Flow Control', description: 'Products for piping, utilities and flow-control requirements.', items: ['CS/SS Pipes', 'Pipe Fittings & Flanges', 'Industrial Valves', 'Gaskets & Seals', 'Strainers', 'Flow-Control Accessories'] },
+  { id: 'maintenance-spares', title: 'Maintenance Spares', description: 'Replacement parts for operational and maintenance needs.', items: ['Bearings', 'Mechanical Seals', 'Filters', 'Belts & Couplings', 'Gaskets', 'Replacement Components'] },
+  { id: 'industrial-consumables', title: 'Industrial Consumables', description: 'Materials for routine industrial use and maintenance.', items: ['Industrial Lubricants', 'Industrial Chemicals', 'Insulation Materials', 'Welding Consumables', 'Abrasives', 'Safety Products & PPE'] }
+];

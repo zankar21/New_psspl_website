@@ -5,6 +5,7 @@ import SectionTitle from "../components/common/SectionTitle";
 import ProductCard from "../components/products/ProductCard";
 
 import { products } from "../data/products";
+import { supplyCategories } from "../data/supplyCategories";
 import {
   principals,
   getPrincipalRelationship
@@ -24,63 +25,11 @@ function Products() {
     }))
     .filter((group) => group.products.length > 0);
 
-  const otherSolutions = [
-    {
-      number: "01",
-      title: "Industrial Spare Parts",
-      description:
-        "Reliable mechanical, maintenance and replacement spare parts for critical industrial operations.",
-      applications:
-        [
-          "Power Plants",
-          "Steel Plants",
-          "Cement Plants",
-          "Mining Operations"
-        ]
-    },
-
-    {
-      number: "02",
-      title: "Industrial Equipment",
-      description:
-        "Industrial equipment and components sourced through our trusted manufacturing and supplier network.",
-      applications:
-        [
-          "Mechanical Equipment",
-          "Process Equipment",
-          "Plant Components",
-          "Maintenance Equipment"
-        ]
-    },
-
-    {
-      number: "03",
-      title: "Electrical Products",
-      description:
-        "Electrical service, maintenance and industrial products supporting critical plant infrastructure.",
-      applications:
-        [
-          "Electrical Systems",
-          "Transformers",
-          "Automation",
-          "Maintenance Products"
-        ]
-    },
-
-    {
-      number: "04",
-      title: "Engineering & Project Solutions",
-      description:
-        "Support for industrial projects, procurement, maintenance and specialized engineering requirements.",
-      applications:
-        [
-          "Project Procurement",
-          "Engineering Support",
-          "Maintenance Solutions",
-          "Industrial Sourcing"
-        ]
-    }
-  ];
+  const otherSolutions = supplyCategories.map((category, index) => ({
+    ...category,
+    number: String(index + 1).padStart(2, "0"),
+    applications: category.items
+  }));
 
 
   return (
@@ -208,9 +157,9 @@ function Products() {
 
 
           <SectionTitle
-            subtitle="BEYOND BOILER PRESSURE PARTS"
-            title="Other Products & Industrial Solutions"
-            description="Our supply and engineering capabilities extend beyond boiler components to support a wider range of industrial requirements."
+            subtitle="INDUSTRIAL SUPPLY & PROCUREMENT"
+            title="Our Product & Equipment Coverage"
+            description="Equipment, components, maintenance spares and consumables sourced against customer specifications. Product availability is subject to manufacturer confirmation."
           />
 
 
@@ -220,6 +169,7 @@ function Products() {
 
               <article
                 className="other-solution-card"
+                id={solution.id}
                 key={solution.title}
               >
 

@@ -152,11 +152,11 @@ export const industries = [
     shortDescription:
       "Industrial equipment, spare parts and maintenance supplies supporting mining and allied processing operations.",
     description:
-      "Mining operations depend on reliable equipment, maintenance supplies and industrial components to sustain continuous production. PSSPL supports mining and allied processing facilities through industrial product and spare-parts supply.",
-    hasDirectExperience: true,
-    experienceTitle: "PSSPL Experience in Mining",
+      "Mining operations depend on reliable equipment, maintenance supplies and industrial components to sustain continuous production. Mining and minerals is a future opportunity sector for PSSPL’s industrial supply and project activities. Western Coalfields Limited (WCL) is listed separately as a historical industrial reference.",
+    hasDirectExperience: false,
+    experienceTitle: "Additional Industrial Reference",
     experienceDescription:
-      "PSSPL has directly contracted industrial work within the mining sector, providing experience with the supply and operational requirements of large mining organisations.",
+      "Western Coalfields Limited (WCL) is a historical industrial reference. Mining and minerals remains a future opportunity sector in the company profile.",
     experienceOrganizations: [
       "Western Coalfields Limited"
     ],

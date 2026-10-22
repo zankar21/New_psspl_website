@@ -47,6 +47,8 @@ function IndustryDetails() {
               {industry.category}
             </span>
 
+            {industry.id > 3 && <p className="industry-experience-note">Future opportunity sector. Product applications described here are potential capabilities, not claims of completed PSSPL projects in this sector.{industry.slug === "mining" && " Western Coalfields Limited (WCL) is listed separately as a historical industrial reference."}</p>}
+
             <h2>Industrial Support for {industry.name}</h2>
 
             <p className="industry-description">
@@ -54,7 +56,7 @@ function IndustryDetails() {
             </p>
           </div>
 
-          {industry.hasDirectExperience && (
+          {industry.hasDirectExperience && industry.id <= 3 && (
             <section
               className="industry-experience"
               aria-labelledby={`experience-${industry.slug}`}

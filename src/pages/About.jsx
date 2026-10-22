@@ -83,13 +83,12 @@ function About() {
               in 2020 and is an industrial supply and engineering
               solutions company, providing boiler pressure parts,
               industrial spares, equipment and engineering support
-              to power, steel, cement, mining and other critical
+              to power, steel and cement customers, while exploring other
               industrial sectors.
             </p>
 
             <p>
-              Headquartered in Chandrapur, PSSPL’s team of 35+ skilled
-              professionals works with manufacturers and industry
+              Headquartered in Chandrapur, PSSPL works with manufacturers and industry
               partners to support industrial clients’ operational
               requirements. This includes PSSPL’s role as Authorised
               Dealer for RIBO Industries in Maharashtra, alongside

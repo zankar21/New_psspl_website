@@ -9,11 +9,11 @@ function CTA() {
         <div>
 
           <p>
-            LET'S DISCUSS YOUR REQUIREMENTS
+            SUPPLY · PROJECTS · COLLABORATIONS
           </p>
 
           <h2>
-            Looking for Reliable Industrial Engineering Solutions?
+            Industrial Supply & Project Support from PSSPL
           </h2>
 
         </div>
