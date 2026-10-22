@@ -4,6 +4,8 @@ import PageHero from "../components/common/PageHero";
 import SectionNav from "../components/common/SectionNav";
 import CTA from "../components/home/CTA";
 import { industries } from "../data/industries";
+import IndustryClientLogos from "../components/industries/IndustryClientLogos";
+import { sectorReferences } from "../data/industryReferences";
 
 function IndustryDetails() {
   const { slug } = useParams();
@@ -54,7 +56,7 @@ function IndustryDetails() {
               {industry.category}
             </span>
 
-            {industry.id > 3 && <p className="industry-experience-note">Future opportunity sector. Product applications described here are potential capabilities, not claims of completed PSSPL projects in this sector.{industry.slug === "mining" && " Western Coalfields Limited (WCL) is listed separately as a historical industrial reference."}</p>}
+            {industry.id > 3 && <p className="industry-section-eyebrow">INDUSTRIAL SUPPLY CAPABILITIES</p>}
 
             <h2>Industrial Support for {industry.name}</h2>
 
@@ -82,6 +84,7 @@ function IndustryDetails() {
                 </p>
               </div>
 
+              <IndustryClientLogos clientIds={sectorReferences[industry.slug].clients} />
               <div className="industry-experience-grid">
                 {industry.experienceOrganizations.map((organization) => (
                   <div
@@ -100,13 +103,10 @@ function IndustryDetails() {
                 ))}
               </div>
 
-              <p className="industry-experience-note">
-                The experience listed above relates to PSSPL&apos;s direct
-                industrial work and is separate from products offered through
-                current manufacturer and principal relationships.
-              </p>
             </section>
           )}
+
+          {industry.slug === "mining" && <p className="industry-experience-note">Additional industrial reference: Western Coalfields Limited (WCL).</p>}
 
           <section
             className="industry-solutions"

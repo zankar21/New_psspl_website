@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { products } from "../../data/products";
 import { industries } from "../../data/industries";
-const pageTitles = { '/': 'Industrial Supply & Project Support', '/about': 'About PSSPL', '/products': 'Products & Equipment', '/services': 'Industrial Services', '/industries': 'Industries & Opportunities', '/partners': 'Manufacturers & Collaborators', '/contact': 'Contact Us' };
+const pageTitles = { '/': 'Industrial Supply & Project Support', '/about': 'About PSSPL', '/products': 'Products & Equipment', '/services': 'Industrial Services', '/industries': 'Industries We Serve', '/partners': 'Manufacturers & Collaborators', '/contact': 'Contact Us' };
 function PageMetadata() {
   const { pathname } = useLocation();
   useEffect(() => {
