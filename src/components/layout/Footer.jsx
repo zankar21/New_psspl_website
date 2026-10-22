@@ -138,8 +138,8 @@ function Footer() {
               <div>
                 <FaEnvelope aria-hidden="true" />
 
-                <a href="mailto:pawanssidhi@gmail.com">
-                  pawanssidhi@gmail.com
+                <a href="mailto:pawanssiddhi@gmail.com">
+                  pawanssiddhi@gmail.com
                 </a>
               </div>
 

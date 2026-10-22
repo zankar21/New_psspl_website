@@ -100,7 +100,7 @@ function Contact() {
 
     setIsSubmitting(true);
     try {
-      const response = await fetch("https://formsubmit.co/ajax/pawanssidhi@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/pawanssiddhi@gmail.com", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
@@ -111,6 +111,10 @@ function Contact() {
         signal: AbortSignal.timeout(20000)
       });
       const result = await response.json();
+      if (response.ok && result.success !== true && result.success !== "true" && /needs activation/i.test(result.message || "")) {
+        setFormMessage("activation");
+        return;
+      }
       if (!response.ok || (result.success !== true && result.success !== "true")) {
         throw new Error("Enquiry submission failed");
       }
@@ -207,7 +211,7 @@ function Contact() {
                   <h4>Email Address</h4>
 
                   <p>
-                    <a href="mailto:pawanssidhi@gmail.com">pawanssidhi@gmail.com</a>
+                    <a href="mailto:pawanssiddhi@gmail.com">pawanssiddhi@gmail.com</a>
                   </p>
                 </div>
 
@@ -267,7 +271,14 @@ function Contact() {
             {formMessage === "error" && (
               <div className="form-message" role="alert">
                 We could not submit your enquiry. Your details are still here so you can try again,
-                or email <a href="mailto:pawanssidhi@gmail.com">pawanssidhi@gmail.com</a> directly.
+                or email <a href="mailto:pawanssiddhi@gmail.com">pawanssiddhi@gmail.com</a> directly.
+              </div>
+            )}
+            {formMessage === "activation" && (
+              <div className="form-message" role="alert">
+                Enquiry delivery is awaiting activation by PSSPL. Please email{' '}
+                <a href="mailto:pawanssiddhi@gmail.com">pawanssiddhi@gmail.com</a>{' '}
+                directly for now. Your enquiry has not been sent.
               </div>
             )}
 
@@ -429,7 +440,7 @@ function Contact() {
 
 
               <p className="form-submit-note">
-                Your enquiry will be sent to pawanssidhi@gmail.com through FormSubmit.
+                Your enquiry will be sent to pawanssiddhi@gmail.com through FormSubmit.
               </p>
 
 
