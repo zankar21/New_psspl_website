@@ -41,6 +41,13 @@
   color: var(--white);
 }
 
+.footer-brand-image {
+  display: block;
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+}
+
 .footer-brand-subtitle {
   color: var(--secondary-color);
   font-size: 13px;

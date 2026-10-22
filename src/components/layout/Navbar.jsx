@@ -19,7 +19,13 @@ function Navbar() {
           className="logo"
           onClick={closeMenu}
         >
-          PAWANSSIDDHI <span>Supplier Pvt Ltd</span>
+          <img
+            className="navbar-brand-image"
+            src="/psspl-logo/Psspl-logo-1.png"
+            alt="PSSPL — Pawanssiddhi Supplier Pvt Ltd"
+            width="2172"
+            height="724"
+          />
         </Link>
 
         {/* Navigation */}

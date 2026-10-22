@@ -19,8 +19,14 @@ function Footer() {
           <div className="footer-company">
 
             <Link to="/" className="footer-logo">
-              <span className="footer-brand-name">PAWANSSIDDHI</span>
-              <span className="footer-brand-subtitle">SUPPLIER PVT LTD</span>
+              <img
+                className="footer-brand-image"
+                src="/psspl-logo/Psspl-logo-2.png"
+                alt="PSSPL — Pawanssiddhi Supplier Pvt Ltd"
+                width="2172"
+                height="724"
+                loading="lazy"
+              />
             </Link>
 
             <p>
