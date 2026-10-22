@@ -31,6 +31,7 @@ function Contact() {
 
   const [errors, setErrors] = useState({});
   const [formMessage, setFormMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
 
   function handleChange(event) {
@@ -79,29 +80,47 @@ function Contact() {
   }
 
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
 
     event.preventDefault();
+    if (isSubmitting) return;
 
     setErrors({});
     setFormMessage("");
 
-    const subject = formData.subject.trim() || "Industrial Enquiry";
-    const body = [
-      `Name: ${formData.name}`,
-      `Company: ${formData.company || "Not provided"}`,
-      `Email: ${formData.email}`,
-      `Phone: ${formData.phone}`,
-      "",
-      "Requirement:",
-      formData.message
-    ].join("\n");
+    if (["name", "email", "phone", "message"].some((key) => !formData[key].trim())) {
+      setErrors(Object.fromEntries(
+        ["name", "email", "phone", "message"]
+          .filter((key) => !formData[key].trim())
+          .map((key) => [key, "Please complete this field."])
+      ));
+      setFormMessage("validation");
+      return;
+    }
 
-    const mailtoLink =
-      `mailto:info@pawanssiddhi.in?subject=${encodeURIComponent(subject)}` +
-      `&body=${encodeURIComponent(body)}`;
-
-    window.location.href = mailtoLink;
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/pawanssidhi@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          ...Object.fromEntries(Object.entries(formData).map(([key, value]) => [key, value.trim()])),
+          _subject: formData.subject.trim() || "Industrial Enquiry — PSSPL Website",
+          _template: "table"
+        }),
+        signal: AbortSignal.timeout(20000)
+      });
+      const result = await response.json();
+      if (!response.ok || (result.success !== true && result.success !== "true")) {
+        throw new Error("Enquiry submission failed");
+      }
+      setFormMessage("success");
+      setFormData({ name: "", company: "", email: "", phone: "", subject: productSubject, message: "" });
+    } catch {
+      setFormMessage("error");
+    } finally {
+      setIsSubmitting(false);
+    }
 
   }
 
@@ -188,7 +207,7 @@ function Contact() {
                   <h4>Email Address</h4>
 
                   <p>
-                    <a href="mailto:info@pawanssiddhi.in">info@pawanssiddhi.in</a>
+                    <a href="mailto:pawanssidhi@gmail.com">pawanssidhi@gmail.com</a>
                   </p>
                 </div>
 
@@ -239,6 +258,18 @@ function Contact() {
 
             )}
 
+
+            {formMessage === "success" && (
+              <div className="form-message" role="status">
+                Your enquiry has been submitted. Thank you for contacting PSSPL.
+              </div>
+            )}
+            {formMessage === "error" && (
+              <div className="form-message" role="alert">
+                We could not submit your enquiry. Your details are still here so you can try again,
+                or email <a href="mailto:pawanssidhi@gmail.com">pawanssidhi@gmail.com</a> directly.
+              </div>
+            )}
 
             <form
               className="contact-form"
@@ -398,17 +429,18 @@ function Contact() {
 
 
               <p className="form-submit-note">
-                Your enquiry will open in your email application for you to review
-                and send directly to PSSPL.
+                Your enquiry will be sent to pawanssidhi@gmail.com through FormSubmit.
               </p>
 
 
               <button
                 type="submit"
                 className="btn-primary submit-button"
+                disabled={isSubmitting}
+                aria-busy={isSubmitting}
               >
 
-                Send Enquiry by Email
+                {isSubmitting ? "Sending…" : "Send Enquiry"}
 
               </button>
 
