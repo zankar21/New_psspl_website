@@ -1,0 +1,72 @@
+{
+  "/images/about-hero.webp": {
+    "src": "/images/heroes-textless/about.webp",
+    "width": 2172,
+    "height": 724
+  },
+  "/images/products-hero.webp": {
+    "src": "/images/heroes-textless/products.webp",
+    "width": 2171,
+    "height": 724
+  },
+  "/images/services-hero.webp": {
+    "src": "/images/heroes-textless/services.webp",
+    "width": 2172,
+    "height": 724
+  },
+  "/images/contact-hero.webp": {
+    "src": "/images/heroes-textless/contact.webp",
+    "width": 2172,
+    "height": 724
+  },
+  "/images/partners-hero.webp": {
+    "src": "/images/heroes-textless/partners.webp",
+    "width": 2172,
+    "height": 724
+  },
+  "/images/industries/industries-hero.webp": {
+    "src": "/images/heroes-textless/industries.webp",
+    "width": 1983,
+    "height": 793
+  },
+  "/images/ribo/ribo-hero.webp": {
+    "src": "/images/heroes-textless/ribo.webp",
+    "width": 2172,
+    "height": 724
+  },
+  "/images/industries/power-generation-hero.webp": {
+    "src": "/images/heroes-textless/power.webp",
+    "width": 2171,
+    "height": 724
+  },
+  "/images/industries/steel-industry-hero.webp": {
+    "src": "/images/heroes-textless/steel.webp",
+    "width": 2172,
+    "height": 724
+  },
+  "/images/industries/cement-industry-hero.webp": {
+    "src": "/images/heroes-textless/cement.webp",
+    "width": 2172,
+    "height": 724
+  },
+  "/images/industries/mining-hero.webp": {
+    "src": "/images/heroes-textless/mining.webp",
+    "width": 2172,
+    "height": 724
+  },
+  "/images/industries/sugar-cogeneration-hero.webp": {
+    "src": "/images/heroes-textless/sugar.webp",
+    "width": 2172,
+    "height": 724
+  },
+  "/images/industries/chemical-process-industries-hero.webp": {
+    "src": "/images/heroes-textless/chemical.webp",
+    "width": 2172,
+    "height": 724
+  },
+  "/images/industries/pulp-paper-hero.webp": {
+    "src": "/images/heroes-textless/paper.webp",
+    "width": 2172,
+    "height": 724
+  }
+}

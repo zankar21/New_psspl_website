@@ -1,0 +1,23 @@
+/* Show each entire panorama; page titles remain accessible HTML. */
+.page-banner { position: relative; }
+.page-banner-image { display: block; width: 100%; height: auto; }
+.page-banner-overlay { position: absolute; inset: 0; display: flex; align-items: center; background: linear-gradient(90deg, rgba(4, 28, 49, .88), rgba(4, 28, 49, .45) 40%, transparent 72%); }
+.page-banner-overlay > .container { width: calc(100% - 40px); }
+.page-banner-copy { width: 48%; padding: 28px 0; }
+.page-banner h1 { color: #fff; font-size: clamp(30px, 3.5vw, 54px); text-wrap: balance; }
+.page-banner .breadcrumb { color: #e4edf5; }
+.page-banner .breadcrumb a { color: #fff; }
+@media (min-width: 701px) {
+  .page-banner-copy { text-shadow: 0 2px 12px rgba(0, 18, 35, .65); }
+}
+@media (min-width: 701px) and (max-width: 1000px) {
+  .page-banner-copy { width: 60%; padding: 18px 0; }
+  .page-banner h1 { font-size: 30px; margin-bottom: 12px; }
+  .page-banner-eyebrow { margin-bottom: 8px; }
+}
+@media (max-width: 700px) {
+  .page-banner-overlay > .container { width: calc(100% - 32px); }
+  .page-banner-overlay { position: static; background: #0b2d4d; }
+  .page-banner-copy { width: 100%; padding: 22px 0 24px; }
+  .page-banner h1 { font-size: clamp(27px, 7vw, 34px); margin-bottom: 14px; }
+}
