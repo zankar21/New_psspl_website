@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaArrowRight, FaDownload, FaCogs, FaBolt, FaIndustry, FaProjectDiagram, FaTools, FaHardHat } from "react-icons/fa";
 import { supplyCategories } from "../data/supplyCategories";
+import TrustedBy from "../components/home/TrustedBy";
 
 const categoryIcons = [FaCogs, FaBolt, FaIndustry, FaProjectDiagram, FaTools, FaHardHat];
 const sectors = [
@@ -31,14 +32,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="profile-facts" aria-label="Company at a glance">
-        <dl className="container profile-facts-grid">
-          <div><dt>Established</dt><dd>2020</dd></div>
-          <div><dt>Headquarters</dt><dd>Chandrapur, Maharashtra</dd></div>
-          <div><dt>Business model</dt><dd>Industrial B2B</dd></div>
-          <div><dt>Authorised dealership</dt><dd>RIBO · Maharashtra</dd></div>
-        </dl>
-      </section>
+      <TrustedBy />
 
       <section className="profile-section" aria-labelledby="verticals-heading">
         <div className="container">
