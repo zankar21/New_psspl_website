@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PageHero from "../components/common/PageHero";
+import SectionNav from "../components/common/SectionNav";
 import {
   principals,
   industryRelationships,
@@ -13,8 +14,10 @@ function Partners() {
     <>
       <PageHero
         title="Principals & Partners"
+        subtitle="MANUFACTURERS · SUPPLIERS · COLLABORATORS"
         artworkSrc="/images/partners-hero.webp"
       />
+      <SectionNav items={[{id:"authorised-dealership",label:"RIBO Dealership"},{id:"supplier-network",label:"Supplier Network"},{id:"collaborators",label:"Collaborators"}]} />
 
       <section className="section partners-intro-section">
         <div className="container partners-intro-content">
@@ -27,7 +30,7 @@ function Partners() {
         </div>
       </section>
 
-      <section className="section featured-partner-section">
+      <section className="section featured-partner-section" id="authorised-dealership">
         <div className="container">
           <span className="section-subtitle">AUTHORISED PARTNERSHIP</span>
 
@@ -75,7 +78,7 @@ function Partners() {
         </div>
       </section>
 
-      <section className="section principals-section">
+      <section className="section principals-section" id="supplier-network">
         <div className="container">
           <div className="section-heading-center">
             <span className="section-subtitle">INDUSTRY RELATIONSHIPS</span>
@@ -114,7 +117,7 @@ function Partners() {
         </div>
       </section>
 
-      <section className="section strategic-partners-section">
+      <section className="section strategic-partners-section" id="collaborators">
         <div className="container">
           <div className="section-heading-center">
             <span className="section-subtitle">STRATEGIC PARTNERS</span>

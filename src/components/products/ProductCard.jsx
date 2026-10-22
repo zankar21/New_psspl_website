@@ -10,7 +10,7 @@ function ProductCard({ product }) {
       <div className={`product-image${product.image ? " product-image--asset" : " product-image-placeholder"}`}>
 
         {product.image ? (
-          <img src={product.image} alt={product.name} />
+          <img src={product.image} alt={product.name} loading="lazy" />
         ) : (
           <>
             {principal && (
@@ -35,7 +35,7 @@ function ProductCard({ product }) {
         </span>
 
         <h3>
-          {product.name}
+          <Link to={`/products/${product.slug}`}>{product.name}</Link>
         </h3>
 
         <p>
@@ -46,6 +46,7 @@ function ProductCard({ product }) {
         <Link
           to={`/products/${product.slug}`}
           className="product-link"
+          aria-label={`View ${product.name} details`}
         >
           Explore Product →
         </Link>

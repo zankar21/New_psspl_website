@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 
 import PageHero from "../components/common/PageHero";
+import SectionNav from "../components/common/SectionNav";
 import CTA from "../components/home/CTA";
 import { industries } from "../data/industries";
 
@@ -37,12 +38,18 @@ function IndustryDetails() {
     <>
       <PageHero
         title={industry.name}
+        subtitle={industry.category}
         artworkSrc={industry.heroImage}
       />
+      <SectionNav items={[
+        {id:"sector-overview",label:"Overview"},
+        ...(industry.hasDirectExperience && industry.id <= 3 ? [{id:`experience-${industry.slug}`,label:"Experience"}] : []),
+        {id:`solutions-${industry.slug}`,label:"Products & Support"}
+      ]} />
 
       <section className="section industry-details">
         <div className="container">
-          <div className="industry-details-intro">
+          <div className="industry-details-intro" id="sector-overview">
             <span className="industry-category">
               {industry.category}
             </span>

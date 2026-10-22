@@ -1,44 +1,18 @@
 import Breadcrumbs from "./Breadcrumbs";
 
-function PageHero({ title, subtitle, breadcrumbs, artworkSrc }) {
-  const breadcrumbItems = breadcrumbs ?? [
-    { label: "Home", to: "/" },
-    { label: title }
-  ];
-
-  if (artworkSrc) {
-    return (
-      <section className="page-hero page-hero--artwork" aria-label={title}>
-        <div className="container page-hero-artwork-title">
-          <p className="page-hero-subtitle">{subtitle}</p>
-          <h1>{title}</h1>
-          <Breadcrumbs items={breadcrumbItems} />
-        </div>
-        <img
-          src={artworkSrc}
-          alt=""
-          className="page-hero-artwork-image"
-          fetchPriority="high"
-        />
-      </section>
-    );
-  }
-
+function PageHero({ title, subtitle = "PAWANSSIDDHI SUPPLIER PVT LTD", breadcrumbs, artworkSrc }) {
+  const items = breadcrumbs ?? [{ label: "Home", to: "/" }, { label: title }];
   return (
-    <section className="page-hero">
-      <div className="container">
-
-        <p className="page-hero-subtitle">
-          {subtitle}
-        </p>
-
-        <h1>{title}</h1>
-
-        <Breadcrumbs items={breadcrumbItems} />
-
+    <section className="page-banner" aria-label={title}>
+      <div className="container page-banner-grid">
+        <div className="page-banner-copy">
+          <p className="page-banner-eyebrow">{subtitle}</p>
+          <h1>{title}</h1>
+          <Breadcrumbs items={items} />
+        </div>
+        {artworkSrc && <div className="page-banner-art" aria-hidden="true"><img src={artworkSrc} alt="" fetchPriority="high" /></div>}
       </div>
     </section>
   );
 }
-
 export default PageHero;

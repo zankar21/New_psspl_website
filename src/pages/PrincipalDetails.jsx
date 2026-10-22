@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
-import Breadcrumbs from "../components/common/Breadcrumbs";
+import PageHero from "../components/common/PageHero";
+import SectionNav from "../components/common/SectionNav";
 import ProductCard from "../components/products/ProductCard";
 import NotFound from "./NotFound";
 import { products } from "../data/products";
@@ -27,58 +28,10 @@ function PrincipalDetails() {
 
   return (
     <>
-      {principal.heroMode === "artwork" ? (
-        <>
-          <section className="principal-artwork-hero" aria-label={`${principal.name} banner`}>
-            <h1 className="visually-hidden">{principal.name}</h1>
-            <img src={principal.heroImage} alt="" />
-          </section>
+      <PageHero title={principal.name} subtitle={getPrincipalRelationship(principal)} artworkSrc={principal.heroImage} breadcrumbs={breadcrumbs} />
+      <SectionNav items={[{ id: "principal-overview", label: "Dealership" }, { id: "principal-products", label: "Product Portfolio" }]} />
 
-          <div className="principal-artwork-navigation">
-            <div className="container principal-artwork-navigation-inner">
-              <Breadcrumbs items={breadcrumbs} />
-              <div className="principal-artwork-actions">
-                <a href="#principal-products" className="btn-primary">
-                  Explore Products
-                </a>
-                <Link to="/contact" className="btn-outline">
-                  Technical Enquiry
-                </Link>
-              </div>
-            </div>
-          </div>
-        </>
-      ) : (
-        <section
-          className="principal-hero"
-          style={{ "--principal-hero-image": `url(${principal.heroImage})` }}
-        >
-          <div className="container principal-hero-container">
-            <Breadcrumbs items={breadcrumbs} />
-
-            <div className="principal-hero-content">
-              <h1>{principal.name}</h1>
-              <p className="principal-hero-relationship">
-                {getPrincipalRelationship(principal)}
-              </p>
-              <p className="principal-hero-category">
-                {principal.productCategories.join(" & ")}
-              </p>
-
-              <div className="principal-hero-actions">
-                <a href="#principal-products" className="btn-primary">
-                  Explore {principal.name} Products
-                </a>
-                <Link to="/contact" className="btn-outline">
-                  Technical Enquiry
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      <section className="section principal-relationship-section">
+      <section className="section principal-relationship-section" id="principal-overview">
         <div className="container principal-relationship-grid">
           <div className="principal-logo-panel">
             <img src={principal.logo} alt={`${principal.name} logo`} />

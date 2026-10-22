@@ -1,5 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import Breadcrumbs from "../components/common/Breadcrumbs";
+import SectionNav from "../components/common/SectionNav";
+import ProductCard from "../components/products/ProductCard";
 import { products } from "../data/products";
 import {
   getPrincipalBySlug,
@@ -71,7 +73,7 @@ function ProductDetails() {
 
               <div className="product-hero-actions">
                 <Link to={enquiryRoute} className="btn-primary">
-                  Request Technical Enquiry
+                  Contact for Product Support
                 </Link>
                 {principal?.detailRoute && (
                   <Link to={principal.detailRoute} className="btn-secondary">
@@ -84,8 +86,18 @@ function ProductDetails() {
         </div>
       </section>
 
+      <SectionNav items={[
+        ...(product.overview ? [{ id: "product-overview", label: "Overview" }] : []),
+        ...(hasFeatures ? [{ id: "product-features", label: "Features" }] : []),
+        ...(hasHighlights ? [{ id: "product-highlights", label: "Technical Highlights" }] : []),
+        ...(hasSpecifications || hasMaterials ? [{ id: "product-specifications", label: "Specifications" }] : []),
+        ...(hasApplications ? [{ id: "product-applications", label: "Applications" }] : []),
+        ...(hasQualityInformation ? [{ id: "product-quality", label: "Quality" }] : []),
+        { id: "related-products", label: "Related Products" }
+      ]} />
+
       {product.overview && (
-        <section className="section product-overview-section">
+        <section className="section product-overview-section" id="product-overview">
           <div className="container product-copy-container">
             <span className="section-subtitle">PRODUCT OVERVIEW</span>
             <h2>Product Overview</h2>
@@ -95,7 +107,7 @@ function ProductDetails() {
       )}
 
       {hasFeatures && (
-        <section className="section product-features-section">
+        <section className="section product-features-section" id="product-features">
           <div className="container">
             <span className="section-subtitle">PRODUCT FEATURES</span>
             <h2>Key Features</h2>
@@ -107,7 +119,7 @@ function ProductDetails() {
       )}
 
       {hasHighlights && (
-        <section className="section product-highlights-section">
+        <section className="section product-highlights-section" id="product-highlights">
           <div className="container">
             <span className="section-subtitle">TECHNICAL INFORMATION</span>
             <h2>Technical Highlights</h2>
@@ -119,7 +131,7 @@ function ProductDetails() {
       )}
 
       {(hasSpecifications || hasMaterials) && (
-        <section className="section product-specifications-section">
+        <section className="section product-specifications-section" id="product-specifications">
           <div className="container product-copy-container">
             <span className="section-subtitle">TECHNICAL INFORMATION</span>
             <h2>Specifications & Materials</h2>
@@ -148,7 +160,7 @@ function ProductDetails() {
       )}
 
       {hasApplications && (
-        <section className="section product-applications-section">
+        <section className="section product-applications-section" id="product-applications">
           <div className="container">
             <span className="section-subtitle">APPLICATIONS</span>
             <h2>Applications</h2>
@@ -160,7 +172,7 @@ function ProductDetails() {
       )}
 
       {hasQualityInformation && (
-        <section className="section product-quality-section">
+        <section className="section product-quality-section" id="product-quality">
           <div className="container product-copy-container">
             <span className="section-subtitle">VERIFIED PROCESS INFORMATION</span>
             <h2>Quality & Inspection</h2>
@@ -200,6 +212,16 @@ function ProductDetails() {
         </section>
       )}
 
+      <section className="section related-products-section" id="related-products">
+        <div className="container">
+          <span className="section-subtitle">CONTINUE EXPLORING</span>
+          <h2>More RIBO Products</h2>
+          <div className="products-grid related-products-grid">
+            {products.filter(item => item.slug !== product.slug && item.principalSlug === product.principalSlug).slice(0, 3).map(item => <ProductCard key={item.slug} product={item} />)}
+          </div>
+        </div>
+      </section>
+
       <section className="section product-enquiry-section">
         <div className="container product-enquiry-inner">
           <div>
@@ -211,7 +233,7 @@ function ProductDetails() {
             </p>
           </div>
           <Link to={enquiryRoute} className="btn-primary">
-            Request Technical Enquiry
+            Contact for Product Support
           </Link>
         </div>
       </section>

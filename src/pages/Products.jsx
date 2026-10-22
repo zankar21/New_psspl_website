@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import PageHero from "../components/common/PageHero";
+import SectionNav from "../components/common/SectionNav";
 import SectionTitle from "../components/common/SectionTitle";
 import ProductCard from "../components/products/ProductCard";
 
@@ -11,7 +12,7 @@ import {
   getPrincipalRelationship
 } from "../data/principals";
 
-import CTA from "../components/home/CTA";
+
 
 
 function Products() {
@@ -41,6 +42,7 @@ function Products() {
         subtitle="INDUSTRIAL SUPPLY & ENGINEERING SOLUTIONS"
         artworkSrc="/images/products-hero.webp"
       />
+      <SectionNav items={[{id:"ribo-portfolio",label:"RIBO Products"},{id:"product-coverage",label:"Supply Categories"}]} />
 
 
       {/* ================= INTRODUCTION ================= */}
@@ -71,7 +73,7 @@ function Products() {
 
       {/* ================= PRINCIPAL PRODUCT LINES ================= */}
 
-      <section className="section products-page">
+      <section className="section products-page" id="ribo-portfolio">
 
         <div className="container">
 
@@ -151,7 +153,7 @@ function Products() {
 
       {/* ================= OTHER SOLUTIONS ================= */}
 
-      <section className="section other-solutions-section">
+      <section className="section other-solutions-section" id="product-coverage">
 
         <div className="container">
 
@@ -206,10 +208,10 @@ function Products() {
 
 
                 <Link
-                  to="/contact"
+                  to={`/contact?category=${solution.id}`}
                   className="solution-enquiry-link"
                 >
-                  Enquire Now →
+                  Contact Our Team →
                 </Link>
 
               </article>
@@ -256,7 +258,7 @@ function Products() {
       </section>
 
 
-      <CTA />
+
 
     </>
   );

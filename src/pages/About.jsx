@@ -1,4 +1,5 @@
 import PageHero from "../components/common/PageHero";
+import SectionNav from "../components/common/SectionNav";
 import SectionTitle from "../components/common/SectionTitle";
 import CTA from "../components/home/CTA";
 
@@ -63,11 +64,12 @@ function About() {
         subtitle="KNOW MORE ABOUT OUR COMPANY"
         artworkSrc="/images/about-hero.webp"
       />
+      <SectionNav items={[{id:"company-overview",label:"Overview"},{id:"company-values",label:"Values"},{id:"directors",label:"Directors"},{id:"team",label:"Team"}]} />
 
 
       {/* COMPANY INTRODUCTION */}
 
-      <section className="section about-page">
+      <section className="section about-page" id="company-overview">
 
         <div className="container about-page-intro">
 
@@ -150,7 +152,7 @@ function About() {
 
       {/* CORE VALUES */}
 
-      <section className="section core-values">
+      <section className="section core-values" id="company-values">
 
         <div className="container">
 
@@ -207,7 +209,7 @@ function About() {
 
       {/* LEADERSHIP — DIRECTORS */}
 
-      <section className="section leadership-section">
+      <section className="section leadership-section" id="directors">
 
         <div className="container">
 
@@ -237,7 +239,7 @@ function About() {
 
       {/* LEADERSHIP — TEAM */}
 
-      <section className="section leadership-section leadership-section-alt">
+      <section className="section leadership-section leadership-section-alt" id="team">
 
         <div className="container">
 
@@ -282,13 +284,13 @@ function About() {
           </div>
 
           <div>
-            <strong>7+</strong>
-            <span>Industries Served</span>
+            <strong>3</strong>
+            <span>Established Core Sectors</span>
           </div>
 
           <div>
-            <strong>11+</strong>
-            <span>Principals & Partners</span>
+            <strong>RIBO</strong>
+            <span>Authorised Dealer · Maharashtra</span>
           </div>
 
         </div>

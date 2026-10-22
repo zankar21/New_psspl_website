@@ -108,6 +108,8 @@ function Footer() {
 
             </ul>
 
+            <a href="/documents/PSSPL_Brochure.pdf" className="footer-view-all" download>Download Brochure ↓</a>
+
             <Link to="/products" className="footer-view-all">
               View All Products <span aria-hidden="true">→</span>
             </Link>
@@ -127,7 +129,7 @@ function Footer() {
                 <FaMapMarkerAlt aria-hidden="true" />
 
                 <span>
-                  Above OneStep Saloon, Milan Chowk, Chandrapur, Maharashtra, India
+                  Above One Step Salon, Near Ramdeo Baba Temple, Milan Square, Chandrapur – 442402, Maharashtra, India
                 </span>
               </div>
 

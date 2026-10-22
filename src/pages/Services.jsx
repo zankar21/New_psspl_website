@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PageHero from "../components/common/PageHero";
+import SectionNav from "../components/common/SectionNav";
 import SectionTitle from "../components/common/SectionTitle";
 import { industries } from "../data/industries";
 import { services } from "../data/services";
@@ -49,20 +50,22 @@ function Services() {
     <>
       <PageHero
         title="Industrial Services"
+        subtitle="CUSTOMER-SPECIFIC PROJECT WORK"
         artworkSrc="/images/services-hero.webp"
       />
+      <SectionNav items={[{id:"service-capabilities",label:"Capabilities"},{id:"technical-services",label:"Field Services"},{id:"service-process",label:"Our Process"},{id:"service-sectors",label:"Sectors"}]} />
 
       <section className="section services-intro">
         <div className="container">
           <SectionTitle
             subtitle="OUR CAPABILITIES"
             title="Industrial Support Beyond Product Supply"
-            description="PSSPL supports industrial clients with execution-oriented services for project, maintenance and operational requirements. Our service capabilities span fabrication, electrical, civil, erection, inspection and site-support activities."
+            description="PSSPL supports industrial clients with execution-oriented services for project, maintenance and operational requirements. Work is undertaken within available capabilities or coordinated with suitable technical partners and specialist contractors, according to agreed scope."
           />
         </div>
       </section>
 
-      <section className="section services-core">
+      <section className="section services-core" id="service-capabilities">
         <div className="container">
           <SectionTitle
             subtitle="CORE INDUSTRIAL SERVICES"
@@ -88,7 +91,7 @@ function Services() {
         </div>
       </section>
 
-      <section className="section services-technical">
+      <section className="section services-technical" id="technical-services">
         <div className="container services-technical-grid">
           <div>
             <span className="section-subtitle">FIELD-BASED TECHNICAL SUPPORT</span>
@@ -111,7 +114,7 @@ function Services() {
         </div>
       </section>
 
-      <section className="section services-process">
+      <section className="section services-process" id="service-process">
         <div className="container">
           <SectionTitle
             subtitle="HOW WE WORK"
@@ -130,12 +133,12 @@ function Services() {
         </div>
       </section>
 
-      <section className="section services-industries">
+      <section className="section services-industries" id="service-sectors">
         <div className="container">
           <div className="services-industries-heading">
             <SectionTitle
-              subtitle="INDUSTRIES SUPPORTED"
-              title="Industrial Sectors We Support"
+              subtitle="ESTABLISHED SECTORS"
+              title="Power, Steel & Cement"
             />
             <Link to="/industries" className="services-text-link">
               Explore Industries <span aria-hidden="true">→</span>
@@ -143,7 +146,7 @@ function Services() {
           </div>
 
           <div className="services-industries-grid">
-            {industries.map((industry) => (
+            {industries.filter(industry => industry.id <= 3).map((industry) => (
               <Link
                 className="services-industry-link"
                 key={industry.slug}

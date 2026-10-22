@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
 import PageHero from "../components/common/PageHero";
+import SectionNav from "../components/common/SectionNav";
 import { products } from "../data/products";
+import { supplyCategories } from "../data/supplyCategories";
 
 import {
   FaMapMarkerAlt,
@@ -17,7 +19,8 @@ function Contact() {
   const [searchParams] = useSearchParams();
   const productSlug = searchParams.get("product");
   const product = products.find((item) => item.slug === productSlug);
-  const productSubject = product ? `Enquiry about ${product.name}` : "";
+  const category = supplyCategories.find(item => item.id === searchParams.get("category"));
+  const productSubject = product ? `Enquiry about ${product.name}` : category ? `Product support: ${category.title}` : "";
 
   const [formData, setFormData] = useState({
     name: "",
@@ -32,6 +35,11 @@ function Contact() {
   const [errors, setErrors] = useState({});
   const [formMessage, setFormMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const statusRef = useRef(null);
+  useEffect(() => {
+    if (formMessage) statusRef.current?.focus();
+  }, [formMessage]);
+
 
 
   function handleChange(event) {
@@ -138,6 +146,7 @@ function Contact() {
         subtitle="GET IN TOUCH WITH US"
         artworkSrc="/images/contact-hero.webp"
       />
+      <SectionNav items={[{id:"contact-information",label:"Contact Details"},{id:"enquiry-form",label:"Send a Message"}]} />
 
 
       <section className="section contact-page">
@@ -147,20 +156,19 @@ function Contact() {
 
           {/* CONTACT INFORMATION */}
 
-          <div className="contact-information">
+          <div className="contact-information" id="contact-information">
 
             <p className="section-subtitle">
               CONTACT INFORMATION
             </p>
 
             <h2>
-              Let's Discuss Your Industrial Requirements
+              Connect With the PSSPL Team
             </h2>
 
             <p className="contact-intro">
-              Contact our team to discuss your boiler pressure
-              component requirements, industrial applications,
-              product availability, or technical enquiries.
+              Contact us for industrial supply, procurement, project coordination
+              and product support. Call or email directly, or use the form.
             </p>
 
 
@@ -177,7 +185,7 @@ function Contact() {
                   <h4>Our Location</h4>
 
                   <p>
-                    Above Onestep Saloon, Milan Chowk, Chandrapur, Maharashtra, India
+                    Above One Step Salon, Near Ramdeo Baba Temple, Milan Square, Chandrapur – 442402, Maharashtra, India
                   </p>
                 </div>
 
@@ -191,10 +199,11 @@ function Contact() {
                 </div>
 
                 <div>
-                  <h4>Phone Number</h4>
+                  <h4>Business Contacts</h4>
 
                   <p>
-                    <a href="tel:+919850333799">+91 9850333799</a>
+                    Dinesh Saraf: <a href="tel:+919850333799">+91 98503 33799</a><br />
+                    Sagar Sharma: <a href="tel:+919028231359">+91 90282 31359</a>
                   </p>
                 </div>
 
@@ -243,16 +252,17 @@ function Contact() {
 
           {/* CONTACT FORM */}
 
-          <div className="contact-form-wrapper">
+          <div className="contact-form-wrapper" id="enquiry-form">
 
 
-            <h2>Send Us an Enquiry</h2>
+            <h2>Send a Message</h2>
+            <p className="contact-form-intro">Fields marked * are required. Include relevant product or project details so our team can assist.</p>
 
 
             {formMessage === "validation" && (
 
               <div
-                className="form-message"
+                className={`form-message form-message-${formMessage}`} ref={statusRef} tabIndex={-1}
                 role="status"
                 aria-live="polite"
               >
@@ -264,18 +274,18 @@ function Contact() {
 
 
             {formMessage === "success" && (
-              <div className="form-message" role="status">
+              <div className={`form-message form-message-${formMessage}`} ref={statusRef} tabIndex={-1} role="status">
                 Your enquiry has been submitted. Thank you for contacting PSSPL.
               </div>
             )}
             {formMessage === "error" && (
-              <div className="form-message" role="alert">
+              <div className={`form-message form-message-${formMessage}`} ref={statusRef} tabIndex={-1} role="alert">
                 We could not submit your enquiry. Your details are still here so you can try again,
                 or email <a href="mailto:pawanssiddhi@gmail.com">pawanssiddhi@gmail.com</a> directly.
               </div>
             )}
             {formMessage === "activation" && (
-              <div className="form-message" role="alert">
+              <div className={`form-message form-message-${formMessage}`} ref={statusRef} tabIndex={-1} role="alert">
                 Enquiry delivery is awaiting activation by PSSPL. Please email{' '}
                 <a href="mailto:pawanssiddhi@gmail.com">pawanssiddhi@gmail.com</a>{' '}
                 directly for now. Your enquiry has not been sent.
@@ -289,6 +299,7 @@ function Contact() {
             >
 
 
+              <fieldset className="contact-fields" disabled={isSubmitting}>
               <div className="form-grid">
 
 
@@ -301,6 +312,8 @@ function Contact() {
                   <input
                     id="name"
                     type="text"
+                    autoComplete="name"
+                    maxLength={150}
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
@@ -329,6 +342,8 @@ function Contact() {
                     id="company"
                     type="text"
                     name="company"
+                    autoComplete="organization"
+                    maxLength={200}
                     value={formData.company}
                     onChange={handleChange}
                     placeholder="Enter company name"
@@ -346,6 +361,8 @@ function Contact() {
                   <input
                     id="email"
                     type="email"
+                    autoComplete="email"
+                    maxLength={254}
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
@@ -373,6 +390,8 @@ function Contact() {
                   <input
                     id="phone"
                     type="tel"
+                    autoComplete="tel"
+                    maxLength={40}
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
@@ -404,6 +423,7 @@ function Contact() {
                   id="subject"
                   type="text"
                   name="subject"
+                  maxLength={250}
                   value={formData.subject}
                   onChange={handleChange}
                   placeholder="What is your requirement?"
@@ -421,6 +441,7 @@ function Contact() {
                 <textarea
                   id="message"
                   name="message"
+                  maxLength={10000}
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Tell us about your requirement..."
@@ -456,6 +477,7 @@ function Contact() {
               </button>
 
 
+              </fieldset>
             </form>
 
 

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import ScrollToTop from "./components/common/ScrollToTop";
+import PageMetadata from "./components/common/PageMetadata";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -21,10 +22,12 @@ function App() {
     <BrowserRouter>
 
       <ScrollToTop />
+      <PageMetadata />
+      <a className="skip-link" href="#main-content">Skip to main content</a>
 
       <Navbar />
 
-      <main>
+      <main id="main-content" tabIndex="-1">
         <Routes>
 
           {/* Main Pages */}
