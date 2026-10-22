@@ -1,3 +1,10 @@
+/* Keep shared content aligned when component styles set width: 100%. */
+.container.navbar-container,
+.container.hero-container {
+  width: 90%;
+  margin-inline: auto;
+}
+
 /* ========================================
    TABLET - 992px
 ======================================== */
@@ -557,4 +564,96 @@
     text-align: center;
   }
 
+}
+/* Phone layouts: readable headings, consistent gutters and comfortable controls. */
+@media (max-width: 600px) {
+  .container,
+  .container.navbar-container,
+  .container.hero-container {
+    width: calc(100% - 40px);
+    margin-inline: auto;
+  }
+
+  .navbar { height: 72px; }
+  .navbar-brand-image { width: 162px; }
+  .menu-toggle { display: inline-flex; }
+  .nav-menu { top: 72px; }
+  .nav-menu.active {
+    max-height: calc(100dvh - 72px);
+    overflow-y: auto;
+    padding: 12px 20px 20px;
+    box-shadow: 0 12px 24px rgba(11, 45, 77, 0.12);
+  }
+  .nav-menu a { min-height: 48px; padding: 12px 0; }
+  .nav-menu .contact-button { width: 100%; justify-content: center; }
+
+  .hero { min-height: 0; padding: 48px 0; }
+  .hero-overlay { background: rgba(6, 23, 41, 0.78); }
+  .hero-subtitle { font-size: 11px; line-height: 1.6; letter-spacing: 1.4px; margin-bottom: 16px; }
+  .hero h1 { font-size: clamp(30px, 8vw, 38px); line-height: 1.2; margin-bottom: 20px; }
+  .hero p { font-size: 16px; line-height: 1.7; margin-bottom: 26px; }
+  .hero-buttons { flex-direction: column; align-items: stretch; gap: 12px; }
+  .hero-buttons a { width: 100%; min-height: 48px; border-radius: 4px; }
+
+  /* Banner artwork contains small embedded type; show real text on phones. */
+  .page-hero.page-hero--artwork {
+    padding: 36px 0;
+    background: linear-gradient(120deg, #081f35, #12466e);
+    text-align: left;
+  }
+  .page-hero-artwork-image { display: none; }
+  .page-hero-artwork-title {
+    position: static;
+    height: auto;
+    padding: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+  .page-hero .page-hero-subtitle { font-size: 11px; line-height: 1.6; letter-spacing: 1.5px; margin-bottom: 10px; }
+  .page-hero h1 { font-size: clamp(28px, 8vw, 34px); line-height: 1.2; margin-bottom: 16px; }
+  .breadcrumb ol { justify-content: flex-start; flex-wrap: wrap; row-gap: 6px; }
+  .breadcrumb { font-size: 13px; }
+
+  .section { padding: 44px 0; }
+  .section-title h2,
+  .about-content h2,
+  .industries-served-header h2,
+  .contact-information h2,
+  .cta-container h2 { font-size: 28px; line-height: 1.3; }
+  .section-subtitle { font-size: 11px; letter-spacing: 1.4px; line-height: 1.6; }
+  .why-grid { gap: 24px; }
+  .features-grid { gap: 24px; }
+  .feature-item { gap: 12px; }
+  .industries-served-header { margin-bottom: 28px; }
+  .served-card { padding: 24px; }
+  .cta-section { padding: 40px 0; }
+  .cta-container { gap: 22px; }
+  .cta-section .btn-primary { width: 100%; white-space: normal; text-align: center; }
+  .cta-container > div { min-width: 0; }
+  .contact-grid { gap: 32px; }
+  .contact-form-wrapper { padding: 24px 18px; }
+  .contact-detail > div:last-child { min-width: 0; overflow-wrap: anywhere; }
+  .form-group input, .form-group textarea { min-width: 0; font-size: 16px; }
+  .contact-form-wrapper h2 { font-size: 23px; line-height: 1.3; }
+  .form-message, .contact-info a { overflow-wrap: anywhere; }
+  .footer .footer-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .footer-brand-image { width: 220px; }
+  .footer-column li a { min-height: 40px; align-items: center; }
+  .footer-column ul { gap: 2px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .nav-menu { transition: none; }
+}
+@media (max-width: 1050px) {
+  .nav-menu { visibility: hidden; }
+  .nav-menu.active { visibility: visible; }
+  .nav-menu .contact-button.active { color: var(--white); }
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+  .services-cta-inner { flex-direction: column; align-items: flex-start; }
+  .services-cta-actions { max-width: 100%; }
 }

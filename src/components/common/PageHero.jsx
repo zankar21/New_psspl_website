@@ -9,7 +9,11 @@ function PageHero({ title, subtitle, breadcrumbs, artworkSrc }) {
   if (artworkSrc) {
     return (
       <section className="page-hero page-hero--artwork" aria-label={title}>
-        <h1 className="page-hero-artwork-title">{title}</h1>
+        <div className="container page-hero-artwork-title">
+          <p className="page-hero-subtitle">{subtitle}</p>
+          <h1>{title}</h1>
+          <Breadcrumbs items={breadcrumbItems} />
+        </div>
         <img
           src={artworkSrc}
           alt=""
